@@ -3,7 +3,7 @@ layout: post
 title: "Lean API Strategy"
 categories: blog
 excerpt: "Looking beyond the buzzwords"
-tags: [api, lean, strategy, books]
+tags: [slides, api, lean, strategy, books]
 author: hlgr360
 share: true
 ---

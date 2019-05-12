@@ -8,7 +8,7 @@ author: hlgr360
 share: true
 ---
 
-My talk at the Nordic APIs event looks at the Internet of Things (IoT), and its potential impact on API design. I am looking at some of the characteristics of IoT applications and give a (very) brief overview over emerging technologies and patterns.
+My talk at the Nordic APIs event looks at the Internet of Things (IoT), and its potential impact on API design. I am looking at some characteristics of IoT applications and give a (very) brief overview over emerging technologies and patterns.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/_zkrI60qaGA" frameborder="0"></iframe>
 

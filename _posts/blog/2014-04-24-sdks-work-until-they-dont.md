@@ -21,7 +21,7 @@ So lets get right to it - what are the main motivators from an API provider pers
 
 SDKs can help API Developers to quickly get a working example of the API. The SDK might also present an optimized client from a target platform perspective (i.e. for mobile connectivity or constrained hardware). It might allow you to simplify your API design by extracting business logic into the client and/or provide better scalability by exploiting client-side processing. Last but not least there might be an expectation or preference by your intended target developer community to have a strongly typed presentation of the API in their programming language of choice.
 
-Lets contrast that with the main drawbacks of SDK's:
+Let's contrast that with the main drawbacks of SDK's:
 
 * Picking platform, language and framework winners
 * 3rd Party framework dependencies
