@@ -8,6 +8,8 @@ author: hlgr360
 share: true
 ---
 
+(this post was originally published on the [Adello Development Blog](http://adello.github.io))
+
 So let's quickly check - did you notice the cookie banner at the bottom of the page? Did you click on it? Thought so .. you did not! 
 
 And this is exactly the problem. Being able to measure the audience of our developer blog was one of the recurring requests from the engineering team. Engineers like numbers - and very few of us are motivated enough to write about our work irrespective of the audience. The reluctance of engineers to step outside of their safety zone and make themselves visible (and thereby vulnerable) is partly due to the prevailing personality of introverts among software developer. Yet most of us are regular readers of technical blogs. And I would lie if not a lot of my own knowledge and ideas are build upon the experiences and ideas of other technical leaders and engineers. And count me in the camp of those who believe that we owe it to our community to give as much as we take.

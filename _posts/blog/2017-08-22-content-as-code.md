@@ -8,6 +8,8 @@ author: hlgr360
 share: true
 ---
 
+(this post was originally published on the [Haufe Development Blog](http://work.haufegroup.io))
+
 In my blog post about [Taking back control of your content - Developer style](https://hlgr360.github.io/blog/blog/running-ghp-jekyll/) I write about my motivation and my initial attempts in treating [Docs Like Code](http://www.docslikecode.com). And I pose the question what would happen if we treated not just docs, but content in general as code.
 
 My life as a developer changed when I first started using [git](https://en.wikipedia.org/wiki/Git). And my view of working collaboratively  changed even more when I started using git together with [github](http://github.com) and [Pull Requests](https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests). 

@@ -8,6 +8,8 @@ author: hlgr360
 share: true
 ---
 
+(this post was originally published on the [Adello Development Blog](http://adello.github.io))
+
 Last month marked the end of my first year as CTO at [adello.com](https://adello.com). Time to reflect on the good, the bad and the surprising. 
 
 Let's back up for a minute to where I came from before joining Adello. One year ago I left my role as Group CTO at Haufe Group (a Freiburg-based company with revenues of around 350 Million EUR). I was responsible for setting and implementing the technology strategy from the backend systems via various platforms all the way to products. In addition, I closely worked with and mentored a team of CTO's from our subsidiaries and engineering sites. The tools of my trade were whiteboards (I had lots of them in my office) and presentations. My day started with meetings, continued with meeting and ended with meetings. And I will openly admit, that I got envious when folks from the business side talked about their customers and product ideas and all those incredible opportunities out there. And when sitting with my engineering teams, I got envious about the stuff they were building, which in theory I all knew but have not had the chance to actually touch and try out myself.  
