@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Sourcing Our Open Source Policy"
-subtitle: "Adello Blog: Why Github is for more than just code"
+excerpt: "Adello Blog: Why Github is for more than just code"
 category: blog
 tags: [culture, open-source]
 author: hlgr360
