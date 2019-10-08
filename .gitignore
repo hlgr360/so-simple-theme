@@ -5,6 +5,7 @@
 .sass-cache
 .editorconfig
 _site
+.vscode
 codekit-config.json
 Gemfile.lock
 node_modules
