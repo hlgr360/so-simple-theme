@@ -20,7 +20,7 @@ You are so wrong (like me) :). Yep, searching for the RequestId in the CloudWatc
 
 Next step deeper into the rabbit hole, fire up your browser and start searching ... Grrrr! Why am I the only one who wants to get the logs of a lambda invocations grouped together. What am I missing? Yes, I could install yet another library but no thank you - I just want my transaction log.
 
-So I open a query on our development chat and a dear colleague of mine  comes to the rescue: Type `"RequestId: <request-id-here>"` in the search bar (including quotes). I was back in the game. And I could finally filter for the outer frame of the lambda invocation (START, END, and REPORT). But wait .. dude, where are **MY** logs? Why the hell would you prepend **MY** logs with the request id but then not show it together with the outer ones.
+So I open a query on our development chat and a dear colleague of mine  comes to the rescue: Type `"RequestId: <request-id-here>"` in the search bar (including quotes). I was back in the game. And I could finally filter for the outer frame of the lambda invocation (START, END, and REPORT). But wait .. dude, where are **MY** logs? Why the hell would you (yes, you AWS - I am talking to you) prepend **MY** logs with the request id but then not show it together with the outer ones.
 
 You got to be kidding me .. another frantic search across message boards and the world-wide-web. Finally a first hint two references across and hidden deep inside a [thread on a message board](https://github.com/aws/aws-sdk-js/issues/781#issuecomment-154499642)
 
