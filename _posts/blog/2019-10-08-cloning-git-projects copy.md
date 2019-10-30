@@ -3,7 +3,7 @@ layout: post
 title: "Scripted cloning of multi-repo projects"
 categories: blog
 excerpt: "What changing jobs and devops have in common"
-tags: [development]
+tags: [development, git]
 author: hlgr360
 share: true
 ---
