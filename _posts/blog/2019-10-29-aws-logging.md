@@ -45,3 +45,6 @@ export async function get(event, context) {
 ```
 
 May the (logging) power be strong in you. 
+
+[1] https://docs.aws.amazon.com/de_de/lambda/latest/dg/nodejs-prog-model-context.html
+[2] https://github.com/getndazn/dazn-lambda-powertools
