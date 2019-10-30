@@ -46,6 +46,10 @@ export async function get(event, context) {
 
 May the (logging) power be strong in you. 
 
+ * [https://docs.aws.amazon.com/de_de/lambda/latest/dg/nodejs-prog-model-context.html](https://docs.aws.amazon.com/de_de/lambda/latest/dg/nodejs-prog-model-context.html)
+ * [https://github.com/getndazn/dazn-lambda-powertools](https://github.com/getndazn/dazn-lambda-powertools)
+ * [https://medium.com/hackernoon/centralised-logging-for-aws-lambda-b765b7ca9152](https://medium.com/hackernoon/centralised-logging-for-aws-lambda-b765b7ca9152)
+ 
 ---
 Update after a comment from my former colleague [Diogo](https://www.linkedin.com/in/diogo-henriques-4b77083a/): 
 
@@ -53,8 +57,4 @@ He pointed me to the CloudWatch Insight console as an alternative method. After 
 
 At a basic level it is quite simple. You select the Log Group of your lambda endpoint, and then click together (or type) a filter expression like `filter @requestId="da1515da-09c8-4112-b50b-27a4bb04f058"`. Pay attention to the time period the query should cover.  
 
-
-[1] [https://docs.aws.amazon.com/de_de/lambda/latest/dg/nodejs-prog-model-context.html](https://docs.aws.amazon.com/de_de/lambda/latest/dg/nodejs-prog-model-context.html)
-[2] [https://github.com/getndazn/dazn-lambda-powertools](https://github.com/getndazn/dazn-lambda-powertools)
-[3] [https://medium.com/hackernoon/centralised-logging-for-aws-lambda-b765b7ca9152](https://medium.com/hackernoon/centralised-logging-for-aws-lambda-b765b7ca9152)
-[4] [https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData-discoverable-fields.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData-discoverable-fields.html)
+ * [https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData-discoverable-fields.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData-discoverable-fields.html)
