@@ -27,3 +27,4 @@ The above versions are tailored to be used with the [Minecraft Modding Course](h
 
 #### References
 * <https://techwiseacademy.com/minecraft-modding-setting-up-your-environment/>
+* <https://blog.usejournal.com/a-beginners-guide-to-modding-minecraft-9a42536495f6>
