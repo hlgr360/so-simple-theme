@@ -10,10 +10,10 @@ share: true
 
 Setting up a Minecraft Forge environment for my youngest one to get into programming, I keep being reminded that there are almost no simple step-by-step recipes to install Minecraft Forge on MacOS:
 
-* If needed, download and install Java JDK 1.8 from our friends at Oracle at [https://www.oracle.com/java/technologies/jdk8-downloads.html] 
+* If needed, download and install Java JDK 1.8 from our friends at Oracle at [https://www.oracle.com/java/technologies/jdk8-downloads.html].
   * If you want to avoid having to register, follow the suggestion in [this thread](https://gist.github.com/wavezhang/ba8425f24a968ec9b2a8619d7c2d86a6#gistcomment-3019424)
-* Download and install Eclipse from [https://www.eclipse.org/downloads/] 
-* Download and install GIMP from [https://www.gimp.org/downloads] 
+* Download and install Eclipse from [https://www.eclipse.org/downloads/].
+* Download and install GIMP from [https://www.gimp.org/downloads].
 * Download Forge 1.12 from [https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.html](pick the Mdk download option)
   * Move the  'forge' directory in 'Downloads' to a folder of your choice, i.e. `Documents`
   * Create a new directory 'eclipse' inside the 'forge' directory
@@ -26,4 +26,4 @@ Setting up a Minecraft Forge environment for my youngest one to get into program
 The above versions are tailored to be used with the [Minecraft Modding Course](https://www.udemy.com/course/minecraft-modding-java/) on [Udemy](https://udemy.com). 
 
 #### References
-* [https://techwiseacademy.com/minecraft-modding-setting-up-your-environment/] 
+* [https://techwiseacademy.com/minecraft-modding-setting-up-your-environment/].
