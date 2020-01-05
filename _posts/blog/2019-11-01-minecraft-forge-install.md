@@ -14,7 +14,7 @@ Setting up a Minecraft Forge environment for my youngest one to get into program
   * If you want to avoid having to register, follow the suggestion in [this thread](https://gist.github.com/wavezhang/ba8425f24a968ec9b2a8619d7c2d86a6#gistcomment-3019424)
 * Download and install Eclipse from <https://www.eclipse.org/downloads/>
 * Download and install GIMP from <https://www.gimp.org/downloads>
-* Download Forge 1.12 from <https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.html> (pick the Mdk download option)
+* Download Forge 1.11.2 from <https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.11.2.html> (pick the Mdk download option)
   * Move the  'forge' directory in 'Downloads' to a folder of your choice, i.e. `Documents`
   * Create a new directory 'eclipse' inside the 'forge' directory
   * Open a terminal and navigate to the 'forge' directory, i.e. `cd Documents/forge`
