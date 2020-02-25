@@ -2,7 +2,7 @@
 layout: post
 title: "Install Kali Linux on USB with MacOS"
 categories: blog
-excerpt: "Simple step-by-step recipe to install Kali Linux with Persistence with MacOS"
+excerpt: "Simple step-by-step recipe to install Kali Linux with Persistence using MacOS"
 tags: [development, security]
 author: hlgr360
 share: true
