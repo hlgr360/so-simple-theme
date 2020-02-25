@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Installing Kali Linux on USB with MacOS"
+title: "Install Kali Linux on USB with MacOS"
 categories: blog
-excerpt: "Simple step-by-step recipe to install Kali Linux with Persistence on MacOS"
+excerpt: "Simple step-by-step recipe to install Kali Linux with Persistence with MacOS"
 tags: [development, security]
 author: hlgr360
 share: true
@@ -36,6 +36,6 @@ This creates a bootable USB stick with free space for creating a new partition u
 
 To add persistence open the `gparted` under Linux and add a new 'primary, ext3' partition on your USB stick. Label it as 'persistence'. After creating the new partition the only remaining task is the step 4 in <https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/> and you are done (after a reboot). (Note: I had to use vi to create the file as sudo).
 
-Enjoy .. but now I better watch out for my son's diabolical laugh when he tries to DOS me .. but guess what, it is a challenge I gladly accept.
+Enjoy .. but now I better watch out for my son's diabolical laugh when he tries to DoS me .. but guess what, it is a challenge I gladly accept.
 
 Hacking you must, but with great power great responsibility comes.
