@@ -53,7 +53,7 @@ dockerui:
   ports:
     - 8080:9000
 ```
-and run it in the same directory with `docker-compose up``
+and run it in the same directory with `docker-compose up`.
 
 To find the corresponding `docker-compose` definition for `pihole`, visit their github repo at <https://github.com/pi-hole/docker-pi-hole/>.
 
