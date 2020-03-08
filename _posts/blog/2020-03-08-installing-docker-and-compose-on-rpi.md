@@ -55,4 +55,6 @@ dockerui:
 ```
 and run it in the same directory with `docker-compose up``
 
+To find the corresponding `docker-compose` definition for `pihole`, visit their github repo at <https://github.com/pi-hole/docker-pi-hole/>.
+
 Docker you should, if not want in installation hell you live.
