@@ -33,7 +33,7 @@ Apply the following fix (from [here](https://www.digitalocean.com/community/ques
 
 * `sudo chmod 666 /var/run/docker.sock`
 
-But installing `docker` is only half the fun without `docker-compose` (taken from (here)[https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl]):
+But installing `docker` is only half the fun without `docker-compose` (taken from [here](https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl)):
 
 * `sudo apt-get install libffi-dev libssl-dev`
 * `sudo apt-get install -y python python-pip`
