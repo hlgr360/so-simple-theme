@@ -8,7 +8,7 @@ author: hlgr360
 share: true
 ---
 
-Another weekend, another project of my son. For whatever reason he has suddenly become very privacy focused and asked me to sell his Alexa and run a [pihole](https://pi-hole.net) on one of our Raspberry Pi's. Now - given that I had to reinstall the RPi multiple times after some other crafty experiments - this felt like a good time to use his enthusiasm and have him learn docker.
+Another weekend, another project of my son. For whatever reason he has suddenly become very privacy focused and asked me to sell his Alexa and run a [pihole](https://pi-hole.net) on one of our Raspberry Pi's. Now - given that I had to reinstall the RPi multiple times after some of his other crafty experiments - this felt like a good time to use his enthusiasm and have him learn docker.
 
 But as usual (sadly I must admit), trying to find a simple step-by-step tutorial turned into a chase of breadcrumbs across the web. So for your and my benefit, here is a summary of my steps to get `docker` and `docker-compose` up and running on a RPi. After I had finished my setup I stumbled across [Installing Docker and Docker Compose on the Raspberry Pi in 5 Simple Steps](https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl) which further reduces the steps needed. Your leverage might vary, but it from briefly reviewing it it might as well do the trick.
 
