@@ -52,7 +52,7 @@ ExecStop=/usr/local/bin/docker-compose down -v
 WantedBy=multi-user.target
 ```
 
-I placed the above file `pihole.service` in `/lib/systemd/system` and created a directory `/lib/systemd/system/pihole.-service.d` (set as workdirectory above). I placed the 'pihole' `docker-compose.yml` file into that directory - which saved me from having to specify the compose file via the `-f` command line parameter (remember that you can not assume to know from where the `systemd` process is running - so explicitly specifying absolute paths is a must).
+I placed the above file `pihole.service` in `/lib/systemd/system` and created a directory `/lib/systemd/system/pihole.-service.d` (set as `WorkingDirectory` above). I placed the `docker-compose.yml` file of the 'pihole' into that directory - which saved me from having to specify the compose file via the `-f` command line parameter (remember that you can not assume to know from where the `systemd` process is running - so using absolute paths is a must).
 
 All what was then left to do was the following commands:
 
