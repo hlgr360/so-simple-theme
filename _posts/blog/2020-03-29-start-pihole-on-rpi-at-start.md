@@ -3,7 +3,7 @@ layout: post
 title: "Running pihole on RPi at startup"
 categories: blog
 excerpt: "How to run services on Raspberry Pi at startup"
-tags: [development, rpi]
+tags: [development, rpi, docker]
 author: hlgr360
 share: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Install docker and docker-compose on RPi"
 categories: blog
 excerpt: "Simple step-by-step recipe to install docker and docker-compose on Raspberry Pi"
-tags: [development, rpi]
+tags: [development, rpi, docker]
 author: hlgr360
 share: true
 ---
