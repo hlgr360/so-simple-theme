@@ -1,0 +1,307 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>IRC and the Age of Chatops &#8211; Holger Reinhardt</title>
+<meta name="description" content="Haufe Blog: IRC and the Age of Chatops">
+<meta name="keywords" content="api">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="IRC and the Age of Chatops">
+<meta name="twitter:description" content="Haufe Blog: IRC and the Age of Chatops">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IRC and the Age of Chatops">
+<meta property="og:description" content="Haufe Blog: IRC and the Age of Chatops">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/irc-chatops/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/irc-chatops/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#api" title="Pages tagged api">api</a></li>
+        </ul>
+        
+          <h1 class="entry-title">IRC and the Age of Chatops</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2016-04-16T00:00:00+00:00"><i class="fa fa-calendar-o"></i> April 16, 2016</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/irc-chatops/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=api&amp;text=IRC%20and%20the%20Age%20of%20Chatops&amp;url=https://hlgr360.github.io/blog/blog/irc-chatops/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/irc-chatops/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/irc-chatops/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="http://work.haufegroup.io">Haufe Development Blog</a>)</p>
+
+<p>Since April 8th Haufe Group has a new group-wide tool to facilitate internal communication between individuals and teams: <a href="https://rocket.chat">Rocket.chat</a>. If you have heard about Slack, then Rocket.chat is just like it.</p>
+
+<h3 id="what-is-it">What is it</h3>
+
+<p>Rocket.chat is a group chat tool you can use to communicate internally in projects, exchange information on different topics in open channels and integrate tooling via bots. If you were around for the beginning of the internet, it’s like IRC but with history. If you know Slack… then it’s exactly like that.</p>
+
+<h3 id="why-another-tool">Why another tool</h3>
+
+<p>… but we already have so many!</p>
+
+<p>We know. But Slack has taken the software industry by storm over the last 3 years. We felt that IRC-style communication fits into a niche where social tools don’t. We experimented with Slack and many of us loved it so we used it daily. We got a lot of good feedback from our Slack pilot over the last year and already more than 100 colleagues registered in the first 24h after our Rocket.chat instance went live.
+If you are curious why we felt the need to support this very distinct form of communication, you might find some interesting information and ideas in the following articles:</p>
+
+<ul>
+  <li><a href="http://techcrunch.com/2015/04/07/modeling-mediums-of-communication/">Modelling mediums of communication</a></li>
+  <li><a href="https://developer.ibm.com/opentech/2015/12/20/irc-the-secret-to-success-in-open-source/">IRC - The secret to success of Open Source</a></li>
+  <li><a href="https://medium.com/synapse/is-slack-the-new-lms-7d1c15ff964f#.m6r5c1b31">Is Slack the new LMS</a></li>
+</ul>
+
+<p>IRC-style communication has been around since the dawn of the Internet and continues to draw a large group of active users. As we strive to create an open and collaborative culture at Haufe, we felt that there was a need to complement the linear social-media style form of communication of something like Yammer with an active IRC-style chat model. As mentioned above, IRC style chat seems to encourage the active exchange of knowledge and helps us in creating a <a href="https://en.wikipedia.org/wiki/Learning_organization">learning organisation</a>.</p>
+
+<p>But there is more. Based on the phenomenal success of Slack in the software industry, companies are starting to experiment with Chatops as a new take on devops:</p>
+
+<ul>
+  <li><a href="https://www.pagerduty.com/blog/what-is-chatops/">What is Chatops</a></li>
+  <li><a href="http://blogs.atlassian.com/2016/01/what-is-chatops-adoption-guide/">Chatops Adaption Guide</a></li>
+</ul>
+
+<p>And last but not least, there is even a trend in the UX community to leverage chat (or so called <code class="highlighter-rouge">conversational interfaces</code>) as a new User Experience paradigm:</p>
+
+<ul>
+  <li><a href="https://medium.com/@acroll/on-chat-as-interface-92a68d2bf854#.vhtlcvkxj">On Chat as an interface</a></li>
+  <li><a href="http://www.fastcodesign.com/3054934/the-next-phase-of-ux-designing-chatbot-personalities">The next phase of UX is designing chatbots</a></li>
+</ul>
+
+<p>Needless to say, we felt that there is not just a compelling case for a tool matching the communication needs of our developer community, but even more a chance to experience first hand through our daily work some of the trends shaping our industry.</p>
+
+<h3 id="so-why-not-slack">So why not Slack</h3>
+
+<p>I give full credit to Slack to reimagine what IRC can look like in the 21st century. But for our needs as a forum across our developer community it has two major drawbacks. The price tag rises very quickly if wanted to role it out aross our entire company. But even more importantly we could not get approval from our legal department due to Germany’s strict data privacy rules.</p>
+
+<p>Rocket.chat on the other hand is Open Source and we are hosting it in our infrastructure. We are keeping costs extremely low by having operations completely automated (which has the welcome side effect of giving our ops team a proving ground to support our Technology Stratgy around Docker and CI/CD). And we got full approval by our legal department on top.</p>
+
+<h3 id="how-to-use-it">How to use it</h3>
+
+<p>We don’t have many rules, and we hope we don’t have to. The language tends to be English in open channels and in #general (where everyone is by default). We strive to keep in mind that there might be colleagues that don’t speak German. Beyond that we ask everyone to be courtegeous, open, helpful, respectful and welcoming – the same way we would want to be treated.</p>
+
+<h3 id="beyond-chat">Beyond chat</h3>
+
+<p>Chat and chat bots are very trendy this year – there is plenty of experimentation around leveraging it as a new channel for commerce, marketing, products, customers and services. Microsoft, Facebook, Slack – they are all trying it out. We now have the platform to do so as well if we want to.</p>
+
+<p>But don’t take our word for it – check out the following links:</p>
+
+<ul>
+  <li><a href="https://medium.com/chris-messina/2016-will-be-the-year-of-conversational-commerce-1586e85e3991#.aathpymsh">2016 will be the year of conversational commerce</a></li>
+  <li><a href="http://www.wired.com/2013/03/conversational-user-interface/">Conversational User Interfaces</a></li>
+  <li><a href="http://uk.businessinsider.com/microsoft-to-announce-chatbots-2016-3">Microsoft to announce Chatbots</a></li>
+  <li><a href="http://www.platformnation.com/2016/04/15/a-future-of-chatbots/">Facebook’s Future in Chatbots</a></li>
+</ul>
+
+<p>Rocket.chat comes with a simple but good API and <a href="https://github.com/RocketChat/hubot-rocketchat">a framework for building bots</a>. We are already looking at integrating with our internal tools like Git, Confluence, Jira, Jenkins and Go.CD.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/api-journey/" class="btn" title="The beginnings of our API Journey">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/qcon-ny-summary/" class="btn" title="Summary of QCon New York, 2016">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

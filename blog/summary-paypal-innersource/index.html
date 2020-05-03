@@ -1,0 +1,551 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Summary of PayPal InnerSource Summit, 2016 &#8211; Holger Reinhardt</title>
+<meta name="description" content="Haufe Blog: Notes from PayPal InnerSource Summit">
+<meta name="keywords" content="conferences, development, culture">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Summary of PayPal InnerSource Summit, 2016">
+<meta name="twitter:description" content="Haufe Blog: Notes from PayPal InnerSource Summit">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Summary of PayPal InnerSource Summit, 2016">
+<meta property="og:description" content="Haufe Blog: Notes from PayPal InnerSource Summit">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/summary-paypal-innersource/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/summary-paypal-innersource/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#conferences" title="Pages tagged conferences">conferences</a></li><li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li><li><a href="https://hlgr360.github.io/blog/tags/#culture" title="Pages tagged culture">culture</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Summary of PayPal InnerSource Summit, 2016</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2016-08-24T00:00:00+00:00"><i class="fa fa-calendar-o"></i> August 24, 2016</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/summary-paypal-innersource/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=conferences,development,culture&amp;text=Summary%20of%20PayPal%20InnerSource%20Summit,%202016&amp;url=https://hlgr360.github.io/blog/blog/summary-paypal-innersource/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/summary-paypal-innersource/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/summary-paypal-innersource/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="http://work.haufegroup.io">Haufe Development Blog</a>)</p>
+
+<p>From April 21st to 22nd, 2016 we were fortunate to attend the <a href="http://paypal.github.io/InnerSourceCommons/events/">PayPal Inner Source Summit</a> in London.</p>
+
+<p>We first got exposed to the InnerSource concept through a talk by PayPal at the <a href="https://hlgr360.github.io/blog/blog/notes-oscon/">OSCON 2015</a> in Amsterdam in fall of 2015. At that point we were struggling to resolve a multitude of project dependencies on our backend platform team. The modus operandi of the team was highly interrupt driven, reactive and managed largely through tickets raised by other teams looking for changes or additions to existing services. There was precious little time in which the team could proactively reduce technical debt or improve operational efficiency. Needless to say the foundation of the so called ‘Haufe Group Service Platform’ (HGSP) continued to deteriorate. (The HGSP was also the topic of <a href="http://www.apiacademy.co/resources/api360-microservices-summit-the-automated-monolith/">my recent talk on the Automated Monolith</a> at the API360 Microservice conference in New York).</p>
+
+<p>Before I dive more into the topic, let me first summarize what InnerSource stands for: To apply the concepts of Open Source to the internal software development inside of your company. You can read more about it at the <a href="http://paypal.github.io/InnerSourceCommons/">InnerSource Commons</a> and/or download a free copy of the <a href="http://www.oreilly.com/programming/free/getting-started-with-innersource.csp">InnerSource eBook</a>. If you google it you will also find some articles, for instance <a href="http://thenewstack.io/github-bloomberg-talk-using-innersource-build-open-source-project-development-behind-company-firewalls/">here</a> and <a href="https://www.infoq.com/news/2015/10/innersource-at-paypal">here</a>.</p>
+
+<p>What made us excited about the InnerSource concept was the premise to unwind or at least greatly reduce those external dependencies, and thereby freeing up the core team to focus on evolving the platform itself. It does so by offering dependent projects the ability to add their required enhancements to the platform code base vs. having to wait for the platform team do it for them.</p>
+
+<p>While it appears to be counter-intuitive at first, remember that (a) this is how Open Source works (and you can hardly argue that it does not scale) and (b) the external team regains control over their own project schedule in exchange for  extra work. The latter is an extremely powerful motivator, especially if you consider that the change might be small or incremental, but keeps being deprioritzed by the platform team due to some other feature from some other projects.</p>
+
+<p>To me there are two macro patterns at work here, which seem to point into the same direction:</p>
+
+<ul>
+  <li>Change the perspective from a point solution (add more developer) to changing the motivators in the system (enable external teams to take care of itself). The same can be said about the <a href="http://readwrite.com/2014/09/17/netflix-chaos-engineering-for-everyone/">Netflix approach of ‘Chaos Engineering’</a>. Instead of pretending that QA can catch every bug (and thereby contributing to an illusion of bug-free systems), Netflix deliberatly introduces failure into the system to force engineers to design software anticipating the presence of failure.</li>
+  <li>Efficiency and Speed are goals at opposite ends (I owe that insight to the folks from Thoughtworks). You can not have both of them at the same time. Microservices (MSA) embrace speed over efficiency through its emphasize on a <code class="highlighter-rouge">shared nothing</code> approach. In effect MSA is saying that databases and app servers are commodity by now and that you do not gain significant business value by using them efficiently. MSA emphasizes duplication and the reduction of cross dependencies over having a central instance which will become the bottleneck.</li>
+</ul>
+
+<p>I would like to thank Danese Cooper and her team for so openly sharing their lessons and knowledge.</p>
+
+<p>Here are my notes from the various sessions under the <a href="https://www.chathamhouse.org/about/chatham-house-rule">Chatham House Rule</a>.</p>
+
+<hr />
+
+<h3 id="how-does-innersource-work-at-paypal">How does InnerSource work at Paypal</h3>
+
+<ul>
+  <li>concept of a trusted <a href="https://en.wikipedia.org/wiki/Committer">committer</a> (TC) within core team</li>
+  <li>define a formal contributor document</li>
+  <li>pull request builder
+    <ul>
+      <li>based on jenkins</li>
+      <li>generates metrics before/after pull
+        <ul>
+          <li>metric can not be worse after merge</li>
+          <li>contains code checking, style, fortify etc</li>
+        </ul>
+      </li>
+      <li>both for internal and external pull requests
+        <ul>
+          <li>peer reviewed pull requests internal</li>
+          <li>rule: pull requestor can not be pull committer</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>pay attention to InnerSource activation and incentive
+    <ul>
+      <li>need to have documentation
+        <ul>
+          <li>system documentation in markdown in the repo</li>
+          <li>so keep documentation and source together in same pull request</li>
+          <li>the teams should have a chance to meet (there difference between inner and open source)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>extrensic vs intrinsic motivation - accept the difference
+    <ul>
+      <li>Core Motivation: It takes too long, lets do it ourself</li>
+      <li>Learning penalty vs intrinsic understanding of the system</li>
+      <li>Motivation: customer (only) sees product as a whole
+        <ul>
+          <li>irregardless how many system boundaries are hidden within</li>
+          <li>Take a customer centric view - take responsibility for the whole stack</li>
+        </ul>
+      </li>
+      <li>pull request helps to improve code structure</li>
+    </ul>
+  </li>
+  <li>InnerSource as company policy
+    <ul>
+      <li>do to others what you want them to do to you</li>
+    </ul>
+  </li>
+  <li>Security concerns
+    <ul>
+      <li>developer does not have production access</li>
+      <li>legal information is isolated</li>
+      <li>production access nur ueber audited tool
+        <ul>
+          <li><em>Example for such an audting framework on AWS from Zalando at <a href="https://stups.io">https://stups.io</a></em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="workshop">Workshop</h3>
+
+<ul>
+  <li>Existing model: variations of ‘big cheese gets stuff done’
+    <ul>
+      <li><em>I could not find a good explanation for it, but the expression means that some inidvidual’s identity and self-worth are tied to ‘being the one which get stuff done’.</em></li>
+    </ul>
+  </li>
+  <li>OSS Apache Model:
+    <ul>
+      <li>ratio of users/contributors/trusted committers/lead is 1000/100/10/1</li>
+    </ul>
+  </li>
+  <li>How can we make trusted committer to not be the chokepoint
+    <ul>
+      <li>super powers come with responsibilities
+        <ul>
+          <li>code mentorship (not rewriting)</li>
+          <li>its like on-boardig new team members</li>
+          <li>if it is not written down, it does not exist</li>
+          <li>think of rewards for trusted committer and team
+            <ul>
+              <li>in open source the submissions to projects stay with the contributor</li>
+              <li>refactoring clues for core team</li>
+              <li>lazy documentation through discussion threads</li>
+              <li>also extrinsic rewards
+                <ul>
+                  <li>i.e. I give you a beer for that, or Badges</li>
+                  <li>Could there be rewards for archiving committer status on external projects?</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Tooling for inner source
+    <ul>
+      <li><a href="http://innersourcecommons.org">http://innersourcecommons.org</a></li>
+      <li><a href="https://www.youtube.com/watch?v=r4QU1WJn9f8">https://www.youtube.com/watch?v=r4QU1WJn9f8</a></li>
+      <li><a href="http://www.inner-sourcing.com">http://www.inner-sourcing.com</a></li>
+    </ul>
+  </li>
+  <li>KPI’s to measure the success of the ‘openness’
+    <ul>
+      <li>To change culture, you can not just do it from the inside, but also create pressure from the outside</li>
+      <li>Create transparency by making all code repos by default visible/public within the company</li>
+      <li>Challenges
+        <ul>
+          <li>How to get PO bought into it (most of them like management by exception and <code class="highlighter-rouge">big cheese</code>)</li>
+          <li><strong>If ownership is culture, part of it is keeping others out</strong>
+            <ul>
+              <li>this code is mine, this is yours
+                <ul>
+                  <li>it must be ok to fail for ownership to stop being exclusive</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Operational responsibility
+            <ul>
+              <li>agreement on the time window of operational responsibility for  merged patch by contributor</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Training of trusted committers
+    <ul>
+      <li>keeper of the flame</li>
+      <li>not everybody will be good at this (rotating)</li>
+      <li>its all about mentorship (did you get that far by yourself?)
+        <ul>
+          <li>what mentor do you want to be</li>
+          <li>growing a new culture</li>
+          <li>do it a sprint at the time</li>
+          <li>have rules of engagement</li>
+          <li>why - because it is leadership (it is about mentoring)</li>
+          <li>visible rewards
+            <ul>
+              <li><a href="http://openbadges.org">http://openbadges.org</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Mozilla_Open_Badges">https://en.wikipedia.org/wiki/Mozilla_Open_Badges</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="interviews-and-lessons-learnt">Interviews and Lessons Learnt</h3>
+
+<h4 id="company-1">Company 1</h4>
+<ul>
+  <li>from central dev to separate dev per business units</li>
+  <li>resulting in a lot of redundancy over the years</li>
+  <li>challenge:
+    <ul>
+      <li>how can we speed up product development</li>
+      <li>AND keep the place interesting for engineers to join the company</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="company-2">Company 2</h4>
+<ul>
+  <li>optimize developer productivity
+    <ul>
+      <li>low friction, high adaption</li>
+      <li>ease of use, ease of contribution</li>
+    </ul>
+  </li>
+  <li>developer community is something to opt-in individually, can not be mandatory
+    <ul>
+      <li>how to motivate people:
+        <ul>
+          <li>is it a personality strait or can it be taught?</li>
+          <li>are people not motivated or do not know how to?</li>
+          <li>was/is there a hiring bias discouraging the right dev to join</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>developer happiness through transparency</li>
+  <li><strong>if you have a PO who is only focussed on his goals, he will eventually loose the team</strong></li>
+</ul>
+
+<h4 id="company-3">Company 3</h4>
+<ul>
+  <li>someone critiquing your code is like someone reading your journal</li>
+  <li>someone critiquing your service is like someone complaining about your children (one step removed)</li>
+  <li>there is an implizit cultural hierarchy/snobbism of programmers depending how hard it is to learn and how many years you needed to put it into</li>
+  <li>law of unintended consequences (start with experiments)</li>
+  <li>modularize software such that it becomes more intelligible for other people
+    <ul>
+      <li>accept diskrete contributions and mentor them through it, observe to learn what to document and what to modularize</li>
+      <li>run experiments long enough to gather useful data (engineers tend to rather write code than listening to feedback)</li>
+      <li>trusted committers need to be taken out sprint rotation for the duration and focus on mentoring (but can be escalated in with clear tracking of costs)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="company-4">Company 4</h4>
+<ul>
+  <li>paper comparing different appropaches <a href="https://www.computer.org/csdl/mags/so/preprint/06809709.pdf">“Inner Source - Adapting Open Source Within Organizations”</a></li>
+  <li>factors for success:
+    <ul>
+      <li>Candidate product</li>
+      <li>Stakeholders</li>
+      <li>Modularity,</li>
+      <li>Bazaar-style Development
+        <ul>
+          <li>maintenance is continuous: moving target or dead corpse</li>
+          <li>caters to the individual style</li>
+          <li>quick turnaround but potentially incoherent approach</li>
+        </ul>
+      </li>
+      <li>Bazaar-style quality assurance
+        <ul>
+          <li>(true) peer review of contributions</li>
+          <li>releasing regularly improves quality
+            <ul>
+              <li>no rushing in code</li>
+              <li>releasing becomes no big deal</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Standardized or at least compatible tools
+        <ul>
+          <li>incompatible toolsets inhibit collaboration</li>
+        </ul>
+      </li>
+      <li>Coordination &amp; leadership to support meritocracy
+        <ul>
+          <li>advocate and evangelists
+            <ul>
+              <li>emerging leadership</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Transparency
+        <ul>
+          <li>needed for visibility</li>
+          <li>cultural fit to accept working in a fishbowl
+            <ul>
+              <li>1:n communication over 1:1</li>
+              <li>management support
+                <ul>
+                  <li>the importance of slack (pict of number slide)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Motivation
+        <ul>
+          <li>There is <strong>‘learned helplessness’ that is afflicting teams without slack and some sense of self-determination</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>On a side note: For me personally it was eye opening to discuss the implications of an institutional bias towards <code class="highlighter-rouge">ownership</code> and ‘single responsibility’ and how this can counteract sharing and agility. It appears that too much focus on ownership might directly contribute towards risk avoidance and lack of openness:</p>
+
+<ul>
+  <li>because being the owner means <code class="highlighter-rouge">if it breaks it is on me</code> and therefor I will do everything in my power to limit my risk</li>
+  <li>which counteracts agility and controlled risk taking</li>
+</ul>
+
+<p>The key here seems to be an institutional bias on ‘if it breaks’. If the default assumption is that it can go wrong, it is clear that we would prefer to have one person responsible. But obviously embracing the possibility of (controlled) failure is what makes all the difference in execution speed between a startup and an enterprise, between a ‘fail fast’ and a risk avoidance culture. But this is a topic worthy of a separate blog post.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/state-of-api-strategy/" class="btn" title="The state of our API Strategy">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/haufe-api-strategy/" class="btn" title="The Haufe API Strategy @ Daimler OneAPI Forum">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

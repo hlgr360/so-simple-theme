@@ -1,0 +1,296 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>From zero to SaaS in 6 hours and 40 min &#8211; Holger Reinhardt</title>
+<meta name="description" content="My Personal Hack-a-thon">
+<meta name="keywords" content="development">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="From zero to SaaS in 6 hours and 40 min">
+<meta name="twitter:description" content="My Personal Hack-a-thon">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From zero to SaaS in 6 hours and 40 min">
+<meta property="og:description" content="My Personal Hack-a-thon">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/from-zero-to-saas/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/from-zero-to-saas/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li>
+        </ul>
+        
+          <h1 class="entry-title">From zero to SaaS in 6 hours and 40 min</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2013-09-16T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 16, 2013</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/from-zero-to-saas/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=development&amp;text=From%20zero%20to%20SaaS%20in%206%20hours%20and%2040%20min&amp;url=https://hlgr360.github.io/blog/blog/from-zero-to-saas/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/from-zero-to-saas/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/from-zero-to-saas/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>I love my work. But from my wife’s perspective I am an addict. Maybe it has to do with the fact that I started programming at age 14, turning a Z80 based electronic typewriter into a PC. To this day I remember the Z80 machine code from porting CPM to this wonderful 8 MHz 4k machine:</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>36 41 21 00 FC 76
+ld A, 0x41h
+ld HL, 0xfc00h
+ld (HL), A
+</code></pre>
+</div>
+
+<p>Needless to say, it has been struggle for her to accept that I live and breath code all the time. And that there is no better time to read exciting books like ‘Getting started with OAuth2’ during vacation time (even though she does put me on an Email diet).</p>
+
+<p>But last week I finally had the chance to put my skills to good use for her. Gabby - my wife - is doing a PhD at the Goethe University Frankfurt and is working with the City of Munich to put together a mobility program for young families.  Over a glass of wine (or was it breakfast?) she explained to me her difficulties of coming up with the best way for hundreds of participants to record their mobility patterns over a couple of days. Turning hundreds of pages of travel diaries into usable statistics does indeed look daunting. ‘I can help you with that’ I said. ‘How about an online platform where your participants can record their travel behavior via an app or a webpage? I bet I can put something together usable in a couple of hours if you give me a day on the weekend and take care of the kids’. Guess what  - she took me up on my offer and I got her approval to stage my own personal hackathon on a Sunday. (If you are not a father of (three - in my case) small kids, you do not understand what it means  to sit in my coffee shop on a Sunday and hack away. It was like the old days!! And yes, I do love my kids)</p>
+
+<p>My motivation - besides putting my coding skills to good use for Gabby - was to find out if our ‘launchd.io’ Ruby-on-Rails SaaS framework could be repurposed for other applications. We had put in quite some effort to get it right and have it work transparently underneath our application code without requiring obvious hooks. I even considered turning it into its own Ruby Gem.</p>
+
+<p>To make it even more fun (and get some material for a blog article) I decided to keep notes throughout this very special personal hack-a-thon. So if you saw me at Starbucks in Esslingen yesterday, here is what I did:</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>11.30 - Arrive at Starbucks, order coffee, setting up, plug in, selecting my heavy metal mix to 'get in the flow'
+11.42 - Start coding (listening to Rammstein)
+12:05 - Basic app layout created, initial setup of Gemfile dependencies (listening to Manowar)
+12:15 - Start creating database migrations: active_admin, device, mobility protocol
+12:30 - Basic database structure completed, database created and migrated (back to Rammstain)
+12:50 - Copied forward multi-tenant and enum support, simplified tenant scope
+13:20 - Initial version of data model done
+13:25 - Admin, user and mobility protocol fixtures added and working (listing to German Punk band Toten Hosen)
+13:30 - Copied database and heroku rake tasks forward, refreshing database to pick up changes
+13:31 - Initial commit to git
+14:00 - First complete cycle of creating, migrating, and loading fixtures into database using a multi-tenanted scope, first refill of coffee, second commit to git (as usual forgot to add new files) ) (Why am I listening to Dire Straits? Skip. Back to Rammstein. Better!)
+14:40 - Active admin interface is up, registering user model for managing user accounts, copying basic Bootstrap styling and jQuery plugins (first some Silbermond, then East-German Plattenbau Rap from Disziplin)
+15:45 - Initial landing page is up, login and redirect does not yet work
+15:46 - Darn, had to remove public/index.html, now the redirect to default route works (Switching to Trance)
+16:45 - Login works, travel entry index page works, adding localization
+16:50 - Starting to work on popup form for adding travel entries (switching to classic: 'Eberlin - Missa a 2 choiri')
+17:55 - Discovering that error_field seems to be a Postgres feature and not supported by Sqlite (Drat!)
+18:10 - Adding a new travel entries through popup form works
+18:15 - Created new private repo on Bitbucket and pushed local repo up
+</code></pre>
+</div>
+
+<p>At this point an user could go to the landing page, log in, see the list of his existing travel entries and create new ones. You might cry foul and say that this is not yet a fully functional platform. And yes - you are right, but I had to pick up my oldest son from a birthday party.</p>
+
+<p>Here are the remaining steps until I handed the keys (aka login credentials) over to Gabby this morning:</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>15 min - Adding edit popup form for existing entries
+30 min - Transitioning from Sqlite3 to Postgres for Heroku deployment
+30 min - Setting up and initial deployment to Heroku
+</code></pre>
+</div>
+
+<p>That’s it. I continue to be in awe of the power of today’s webapp frameworks and ease of initial deployment to a PaaS like Heroku. And yes - we have run into problems with Heroku deploying launchd.io (and it is probably worth exploring them in a separate blog article), but you can’t argue with the result of these 8 hours - a fully functional multi-tenant app which is accessible worldwide.</p>
+
+<p>PS: After reading the blog Gabby commented that I mentioned to love my work and my kids (and then she paused expressively). So let it be known that I love my wife too!</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/lean-entrepreneur-books/" class="btn" title="The Lean (Entrepreneurship) Reading List">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/event-horizon/" class="btn" title="Event Horizon - The Future of APIs in IoT">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

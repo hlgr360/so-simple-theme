@@ -1,0 +1,283 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>The state of our API Strategy &#8211; Holger Reinhardt</title>
+<meta name="description" content="Haufe Blog: From a response to a sales call by an API Management vendor">
+<meta name="keywords" content="api">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="The state of our API Strategy">
+<meta name="twitter:description" content="Haufe Blog: From a response to a sales call by an API Management vendor">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The state of our API Strategy">
+<meta property="og:description" content="Haufe Blog: From a response to a sales call by an API Management vendor">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/state-of-api-strategy/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/state-of-api-strategy/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#api" title="Pages tagged api">api</a></li>
+        </ul>
+        
+          <h1 class="entry-title">The state of our API Strategy</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2016-08-16T00:00:00+00:00"><i class="fa fa-calendar-o"></i> August 16, 2016</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/state-of-api-strategy/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=api&amp;text=The%20state%20of%20our%20API%20Strategy&amp;url=https://hlgr360.github.io/blog/blog/state-of-api-strategy/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/state-of-api-strategy/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/state-of-api-strategy/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="http://work.haufegroup.io">Haufe Development Blog</a>)</p>
+
+<p>This is a (slightly adapted) version of a response to a sales enquiry of an API Management vendor. We had contacted them a year ago but the sales lead back then felt that our focus on ‘just enough API management’ was too narrow and not addressing the larger needs (and bigger deal) of the ‘Digital Transformation’ of the Haufe Group.</p>
+
+<p>I am sure that sales person would have been more than happy to help us find out exactly what transformational impact his entire product portfolio would have been on our enterprise architecture if we had just let him (which we did not).</p>
+
+<p>Disclaimer: I know personally some of the key folks working at this vendor and I have nothing but the highest respect for what they are building. So this exchange does not try to show disrespect to their product and team, but rather illustrate how not going beyond the sales script can sometimes lead to unintended consequences.</p>
+
+<hr />
+
+<p>Dear XXX</p>
+
+<p>Yes, indeed a year has passed. Well, back then you guys kind of blew it when your sales lead insisted on discussing an entire enterprise transformation strategy and our distributed API-first architecture and planned budget wasn’t quite in your general (deal) ballpark. Since our Technology Strategy for the Haufe Group calls for being like the web and not behind the web your commercial model apparently made it quite a bit difficult to engage on such a small scale.</p>
+
+<p>But I was delighted to see your most recent enterprise architecture white papers closely tracking our Technology Strategy. I think it fully validates our approach to provide decentralized API management based on the basis of a bounded (business) context (Conway’s law applies to API Management too).</p>
+
+<p>In the meantime we have settled on Mashape’s Kong and our own API Mgmt Portal (one developer full-time for 3 months) for our internal API deployments. I think you will find our portal to approach API Management from quite a different perspective than most traditional API Mgmt vendors - it fully embraces infrastructure as code and immutable servers. In our opinion it simply doesn’t make any sense to (re)introduce long-running API gateway and portal servers to manage and service API’s from Microservices, which are deployed fully automated through our CI/CD pipeline. We like to think that this brings us closer to the concept of APIOps - applying the same basic concepts of DevOps but to API operations.</p>
+
+<p>You can find more details at http://wicked.haufe.io.</p>
+
+<p>On the design governance side we also progressed rather nicely. You might find our API Styleguide of interest - I think it represents some of the best  practices from the industry. We are planning to use Gitbook or ReadTheDocs to publish it in a better e-book style format. We took a lot of inspiration from the Zalando API Styleguide.</p>
+
+<p>The one remaining missing piece in our API story is an API registry. But again I am not looking for a repeat of the fallacy of a centralized UDDI or WSRR registry, but taking the Web as example and working something along http://apis.io (Source code available at https://github.com/apisio/apis.io). Central registries never worked, but Google does. Hence an API search engine with a choice or combination of a single git repo (containing API definitions) supporting pull requests and/or the ability to register commit web hooks to many git repo’s (each representing one or more API definitions) and/or an active crawler which actively looks for new API definitions (similar to ATOM Pub service document at the root or a well known location of the service URL) will do. I found Zalando’s API Discovery strategy to be very inspiring, but we might start with a Repo-based approach to learn and iterate.</p>
+
+<p>I am still looking for contributors for that last piece of our API strategy to fall in place. But based on the already existing work in http://apis.io from 3Scale and the API Evangelist I think we are not that far off from where we need to be … and if necessary we will develop the missing functionality and provide it as open source to the community.</p>
+
+<p>I hope this gives you a good overview over the current status of the API piece in our Technology Strategy. You can follow us at @HaufeDev or find up to date information on our Developer Blog. We are tentatively planning to make an announcement of our API portal in the September time frame.</p>
+
+<p>BTW our API Portal is written such that it can be placed on top of other API Gateways. So if you (or another vendor) are interested in trying it out to make it work for your API gateway, ping us.</p>
+
+<p>Cheers, Holger (CTO – Haufe.Group)</p>
+
+<hr />
+
+<p>While this blog post was largely spontaneous, our offer to provide the API Management Portal as Open Source to API Gateway vendors is serious.</p>
+
+<p>Our industry has benefited greatly from the openness and sharing of knowledge not just within the API community but also through the commercial sponsorship of API Management vendors like Mulesoft, Layer7, Apigee 3Scale and many others. (Disclosure: I am a former member of the Layer7 sponsored API Academy)</p>
+
+<p>PS: If you are like me you might be curious why we called our API Portal wicked - well we first had a different name but the Mashape folks asked us to change it as to not confuse it with their commercial offerings. Since Mashape has been very supportive and also provided Kong as Open Source, we felt that we owed them. We then thought of our goal to provide wicked (good) APIops and hence the name Wicked was born. It helps that it is also a play on Wicket as in “..1. A small door or gate, especially one built into or near a larger one. ..”</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/automated-monolith/" class="btn" title="The Automated Monolith">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/summary-paypal-innersource/" class="btn" title="Summary of PayPal InnerSource Summit, 2016">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

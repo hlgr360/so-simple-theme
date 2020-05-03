@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Would You Like a Library with That (API)? &#8211; Holger Reinhardt</title>
+<meta name="description" content="SDKs work until they don't">
+<meta name="keywords" content="api">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Would You Like a Library with That (API)?">
+<meta name="twitter:description" content="SDKs work until they don't">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Would You Like a Library with That (API)?">
+<meta property="og:description" content="SDKs work until they don't">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#api" title="Pages tagged api">api</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Would You Like a Library with That (API)?</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2014-04-24T00:00:00+00:00"><i class="fa fa-calendar-o"></i> April 24, 2014</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=api&amp;text=Would%20You%20Like%20a%20Library%20with%20That%20(API)?&amp;url=https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Over the last couple of months I have had the great opportunity to road test my findings on SDKs vs APIs with a wide variety of audiences at our API Summits in New York and London, on-tour with the Nordic API team in Stockholm and Copenhagen as well as my most recent API Workshop in Istanbul. Given the apparent relevance of the topic and lively discussions, I would like to summarize some of the insights and recommendation here as well.</p>
+
+<p>If you have been following our blog you will remember that I started this topic with the observation that using APIs increasingly seem to imply using SDKs rather than the API itself [link here]. I followed up with a blog talking about my decidedly mixed experiences of trying to use SDKs [link here]. My own experiences inspired the tagline of this blog trying to bring it all together: <strong>SDKs work until they don’t</strong>.</p>
+
+<p>So lets get right to it - what are the main motivators from an API provider perspective to invest into a SDK:</p>
+
+<ul>
+  <li>Time to first use</li>
+  <li>Best client for your API</li>
+  <li>Simplified API design</li>
+  <li>Strongly typed presentation</li>
+</ul>
+
+<p>SDKs can help API Developers to quickly get a working example of the API. The SDK might also present an optimized client from a target platform perspective (i.e. for mobile connectivity or constrained hardware). It might allow you to simplify your API design by extracting business logic into the client and/or provide better scalability by exploiting client-side processing. Last but not least there might be an expectation or preference by your intended target developer community to have a strongly typed presentation of the API in their programming language of choice.</p>
+
+<p>Let’s contrast that with the main drawbacks of SDK’s:</p>
+
+<ul>
+  <li>Picking platform, language and framework winners</li>
+  <li>3rd Party framework dependencies</li>
+  <li>SDK carry-on weight</li>
+  <li>Long-term support costs</li>
+</ul>
+
+<p>Developing an SDK means to make a choice among platforms, languages and frameworks. Picking those “winners” is bound to disappoint at least some of your target API developers. Further more - since most SDKs will rely on some common 3rd party frameworks - an API developer having to integrate with two or more API’s leveraging the same common framework but at different version levels is bound to experience quite some headache. Even if it is not initially the case different release cycles of those APIs might introduce diverging yet incompatible versions of the same framework down the road. Some of the SDK’s add quite some carry-on weight of unused functionality to the application. And once a SDK is released there are long-term support costs.</p>
+
+<p>But to me the biggest risk of a SDK First approach lies in <strong>making API design an afterthought</strong>. We have come to this point in the API evolution because Pragmatic REST introduces <strong>just enough</strong> constrains to force us to think about how we can abstract the underlying business asset into a resource-based model restricted to CRUD-style interactions. A SDK First approach might tempt us to go back to a RPC-style API design mirrowing the backend implementation resulting in all the inherent integration complexities like we have had with Web Services.</p>
+
+<p>So if and when you decide  on a SDK, keep the above in mind. You might still come to the conclusion that you need a SDK yo quickly on-board developers or provide the best client for your API, but at least you can conciously weight the benefits against the drawbacks.</p>
+
+<p>If you want to dig more deeply into the subject I can highly recommend the following podcasts and blogs which helped me greatly to inform my opinon:</p>
+
+<ul>
+  <li><a href="http://trafficandweather.io/posts/2013/10/20/episode-18-this-will-be-way-easier">Traffic and Weathers Podcast Episode 18</a></li>
+  <li><a href="http://trafficandweather.io/posts/2013/12/27/episode-20-im-going-to-punch-a-wall">Traffic and Weathers Podcast Episode 20</a></li>
+  <li><a href="http://brandur.org/sdk">Why I Don’t Want Your SDK in Production</a></li>
+  <li><a href="http://apiux.com/2013/10/18/why-no-one-wants-to-use-your-api/">Why No One Wants To Use Your API</a></li>
+  <li><a href="http://blog.programmableweb.com/2013/10/04/when-sdks-are-better-than-apis/">Why SDKs Are Better Than APIs</a></li>
+  <li><a href="http://blog.programmableweb.com/2014/03/05/panel-urges-api-providers-to-prioritize-their-developer-experiences/">Panel Urges API Providers To Prioritize Their Developer Experiences</a></li>
+  <li><a href="http://apievangelist.com/2014/01/07/will-internet-of-things-and-the-sdk-push-out-rest/">Will Internet of Things And The SDK Push Out REST?</a></li>
+</ul>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/sdk-vs-api/" class="btn" title="SDK versus API">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/lean-api-strategy/" class="btn" title="Lean API Strategy">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

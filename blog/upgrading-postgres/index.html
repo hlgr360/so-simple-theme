@@ -1,0 +1,291 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Upgrading from Postgres 9.2 to 9.3 on Heroku &#8211; Holger Reinhardt</title>
+<meta name="description" content="Why I stoped loving and started hating PaaS">
+<meta name="keywords" content="development">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Upgrading from Postgres 9.2 to 9.3 on Heroku">
+<meta name="twitter:description" content="Why I stoped loving and started hating PaaS">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Upgrading from Postgres 9.2 to 9.3 on Heroku">
+<meta property="og:description" content="Why I stoped loving and started hating PaaS">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/upgrading-postgres/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/upgrading-postgres/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Upgrading from Postgres 9.2 to 9.3 on Heroku</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2014-10-18T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 18, 2014</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/upgrading-postgres/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=development&amp;text=Upgrading%20from%20Postgres%209.2%20to%209.3%20on%20Heroku&amp;url=https://hlgr360.github.io/blog/blog/upgrading-postgres/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/upgrading-postgres/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/upgrading-postgres/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>It is no secret that we build <a href="http://wwww.launchd.de">launchd.de</a> using Ruby on Rails and are running it on Heroku. It was the fastest and easiest way to get the platform up and running one year ago. But while the experience of using Ruby on Rails has been nothing short of transformative, my experience with Heroku has been a decidedly mixed bag.</p>
+
+<p>From the looks of it a Platform-as-a-Service (PaaS) is just brilliant. It takes away all the pain of managing your deployment on an Infrastructure-as-a-Service (IaaS) while preserving the inherent scalability. And Heroku makes on-boarding super easy. Literally signing up and a ‘git push’ and you are on your way. But baked into a PaaS are certain mental models and assumptions about how your app is suppose to be like. Maybe call it best practices, but in the end it might just be that <strong>“my best practices are your worst nightmares”</strong>. Our first rookie mistake cost us 2 weeks in launching <a href="http://wwww.launchd.de">launchd.de</a>. We had simply forgotten to fix the version numbers in our Gemfile. And since half a year had passed from starting to code to actual launching, the initial deploy to Heroku resulted in countless gem upgrades which ultimately broke our app. Fine - lesson learnt (since we have day jobs to attend to, the resulting forklift upgrade cost us 2 weeks.). Then - a couple of months later - came a system wide upgrade of Rails (or was it Ruby) which cost us another week or so. And so on and so on.</p>
+
+<p>Remember, the initial promise of a PaaS was that we did not have to worry about the infrastructure  - yet the reality of running a SaaS platform on a PaaS is that you still need to care, just at a higher level. True, I don’t need to provision machine instances and load balancers, but now I need to worry about forklift upgrades of frameworks I am relying on (which force me to deal with version incompatibilities of something which worked previously when I should be focussing on new features for my customers). This does not even mention problems with the Rails asset pipeline apparently working differently on my local dev system vs in Heroku.</p>
+
+<p>What motivated me to this column was the latest episode of such an upgrade. We had exceeded the free database tier and were forced to upgrade to the first paid tier. Except that the free tier was Postgres 9.2 and the paid tier was Postgres 9.3. I need to add that we have wrapped our deployment process in a script which backs up our customer database both via the ‘pgbackup’ plugin of Heroku and to local file. After pushing the latest version of our code repo we would reset the database and restore from backup. This allows us to extend existing database schemas “in place” rather than keep adding consecutive migration files (I really dislike a directory with lots - and I mean lots - of files). Unfortunately the pg_dump for PG 9.2 will not work with a PG 9.3 instance - so for all sense and purpose our deployment process was broken after we switched to the paid tier. And sure - you could argue that it was our choice to structure our deployment process in this way, but guess what - this is exactly what I mean by “every PaaS has certain practices and mental models built in”. You follow them - your are fine. You break them knowingly or unknowingly - you are in for a lot of pain (and guess what, most of the baked-in assumptions are not even documented anywhere). To tie it back to my day job - PaaS are like <a href="https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/">API SDK’s - they work until they don’t</a>.</p>
+
+<p>But fair enough - with a university wanting to use our platform for their entrepreneur course and certain features and bug fixes I needed to get in before the deadline, I had to upgrade my local environment from Postgres 9.2 to 9.3. I did not want to risk a single byte of data of my customers and was not willing to drop the ability to create a backup of the data locally.</p>
+
+<p>As you can imagine (why would I write this blog otherwise), the upgrade itself turned a bit into a nightmare. Even though it was suppose to be the most simple of all - I had no data locally to preserve - simply dropping PG 9.2 and installing PG 9.3 should have been sufficient. Except I struggled to get PG 9.3. to work with my local Rails installs for a couple of long nights (remember, I have a day job). So if you think you did everything right upgrading to PG 9.3 but encounter the following problem</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>could not connect to server: No such file or directory
+Is the server running locally and accepting connections on Unix domain socket
+"/var/run/postgresql/.s.PGSQL.5432"?
+</code></pre>
+</div>
+
+<p>I can hopefully save you a few hours by pointing out that PG 9.3 appears to have changed its default port from 5432 to 5433. The corresponding configuration file</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>/etc/postgresql/9.3/main/postgresql.conf
+
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+
+listen_addresses = 'localhost' # what IP address(es) to listen on;
+# comma-separated list of addresses;
+# defaults to 'localhost'; use '*' for all
+# (change requires restart)
+port = 5433 # (change requires restart)
+max_connections = 100 # (change requires restart)
+</code></pre>
+</div>
+
+<p>The TCP port shows up as part of the UNIX domain socket filename. So if your Postgres instance is listening on 5433 but your Rails app is expecting it on 5432 (Rails will default to 5432 if you do not specify Port in “config/database.yml”) you will get above error. I ended up adding both the Port directive to my database.yml file and configuring Postgres to listen to port 5432. This - btw - also allowed phpPgAdmin to connect to the database again since it was also implicitly defaulting to port 5432 (it had shown a ‘Login Invalid’ error when it could not connect).</p>
+
+<p>Here are the links which helped me to get a working Postgres 9.3 instance up and running:</p>
+
+<ul>
+  <li>(http://stackoverflow.com/questions/10263821/rails-rake-dbcreateall-fails-to-connect-to-postgresql-database)</li>
+  <li>(http://www.unixmen.com/install-postgresql-9-3-phppgadmin-centos-6-5/)</li>
+</ul>
+
+<p>So what are my conclusion? Well - I am already knee deep into moving our platform into Docker, well <a href="http://www.vagrantup.com/downloads.html">Vagrant</a> + <a href="https://coreos.com/docs/running-coreos/platforms/vagrant/#single-machine">CoreOS</a> + <a href="http://www.talkingquickly.co.uk/2014/06/rails-development-environment-with-vagrant-and-docker/">Docker</a> to be precise. First with our development setup and then onto Amazon for production. Ultimately <strong>control over my runtime environment in an IaaS trumps the backloaded convenience of a PaaS</strong>. I will keep you posted.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/event-horizon-revisited/" class="btn" title="Event Horizon - The Future of APIs in IoT (revisited)">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/notes-apicon/" class="btn" title="APIconUK 2014: Blockchain and APIs">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

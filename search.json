@@ -1,0 +1,477 @@
+[
+
+  
+    {
+      "title"			: "Accessing AWS RDS from local shell",
+      "link"			: "https://hlgr360.github.io/blog/blog/accessing-rds-from-cmdln/",
+      "excerpt"		: "How to access a AWS RDS instance from your local command line"
+    }
+  
+
+  
+    ,{
+      "title"			: "Installing brew and lazydocker on RPi",
+      "link"			: "https://hlgr360.github.io/blog/blog/installing-brew-on-rpi/",
+      "excerpt"		: "Installing a simple terminal UI for both docker and docker-compose on RPi"
+    }
+  
+
+  
+    ,{
+      "title"			: "Running pihole on RPi at startup",
+      "link"			: "https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/",
+      "excerpt"		: "How to run services on Raspberry Pi at startup"
+    }
+  
+
+  
+    ,{
+      "title"			: "Install docker and docker-compose on RPi",
+      "link"			: "https://hlgr360.github.io/blog/blog/installing-docker-and-compose-on-rpi/",
+      "excerpt"		: "Simple step-by-step recipe to install docker and docker-compose on Raspberry Pi"
+    }
+  
+
+  
+    ,{
+      "title"			: "Install Kali Linux on USB with MacOS",
+      "link"			: "https://hlgr360.github.io/blog/blog/installing-kali-macos/",
+      "excerpt"		: "Simple step-by-step recipe to install Kali Linux with Persistence using MacOS"
+    }
+  
+
+  
+    ,{
+      "title"			: "Summary of 'Digitale Leute' 2019 in Cologne",
+      "link"			: "https://hlgr360.github.io/blog/blog/digital-leute-2019/",
+      "excerpt"		: "Two and a half talks and a book."
+    }
+  
+
+  
+    ,{
+      "title"			: "Designing Systems - Efficiency vs Flexibility",
+      "link"			: "https://hlgr360.github.io/blog/blog/efficiency-flexibility/",
+      "excerpt"		: "Or why you should consider taking a course in System Theory."
+    }
+  
+
+  
+    ,{
+      "title"			: "Minecraft Forge install on MacOS",
+      "link"			: "https://hlgr360.github.io/blog/blog/minecraft-forge-install/",
+      "excerpt"		: "Simple step-by-step recipe to install Minecraft Forge on MacOS"
+    }
+  
+
+  
+    ,{
+      "title"			: "Haufe Blog: Goodbye CTO, Hello Technical Fellow",
+      "link"			: "https://hlgr360.github.io/blog/blog/hello-fellow/",
+      "excerpt"		: "Hic sunt dracones - There Might Be Dragons."
+    }
+  
+
+  
+    ,{
+      "title"			: "AWS Lambda CloudWatch Logging",
+      "link"			: "https://hlgr360.github.io/blog/blog/aws-logging/",
+      "excerpt"		: "How to group AWS Lambda Logs by RequestId"
+    }
+  
+
+  
+    ,{
+      "title"			: "Building SaaS on AWS Serverless - Part 1",
+      "link"			: "https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/",
+      "excerpt"		: "Adello Blog: Programmatic advertising explained"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Adello API Style Guide",
+      "link"			: "https://hlgr360.github.io/blog/blog/api-style-guide/",
+      "excerpt"		: "Adello Blog: Going from comprehensive to minimalistic (and packing a bigger punch)"
+    }
+  
+
+  
+    ,{
+      "title"			: "Scripted cloning of multi-repo projects",
+      "link"			: "https://hlgr360.github.io/blog/blog/cloning-git-projects-copy/",
+      "excerpt"		: "What changing jobs and devops have in common"
+    }
+  
+
+  
+    ,{
+      "title"			: "Open Sourcing Our Open Source Policy",
+      "link"			: "https://hlgr360.github.io/blog/blog/oss-policy/",
+      "excerpt"		: "Adello Blog: Why Github is for more than just code"
+    }
+  
+
+  
+    ,{
+      "title"			: "GDPR and Developer Culture",
+      "link"			: "https://hlgr360.github.io/blog/blog/gdpr-developer-culture/",
+      "excerpt"		: "Adello Blog: Will you help to motivate engineers to write about their work?"
+    }
+  
+
+  
+    ,{
+      "title"			: "One year at adello.com",
+      "link"			: "https://hlgr360.github.io/blog/blog/one-year-adello/",
+      "excerpt"		: "Adello Blog: The good, the bad, and the surprising"
+    }
+  
+
+  
+    ,{
+      "title"			: "we.are.adello",
+      "link"			: "https://hlgr360.github.io/blog/blog/adello-hello-world/",
+      "excerpt"		: "Adello Blog: The C in CTO stands for Culture"
+    }
+  
+
+  
+    ,{
+      "title"			: "Building SentinentAI mod for Minecraft",
+      "link"			: "https://hlgr360.github.io/blog/blog/sentinent-ai-minecraft/",
+      "excerpt"		: "Getting back into the game - quite literally"
+    }
+  
+
+  
+    ,{
+      "title"			: "Treating our Content as Code",
+      "link"			: "https://hlgr360.github.io/blog/blog/content-as-code/",
+      "excerpt"		: "Haufe Blog: What DevOps and CI/CD can teach us about content publishing"
+    }
+  
+
+  
+    ,{
+      "title"			: "Taking back control of your content - Developer style",
+      "link"			: "https://hlgr360.github.io/blog/blog/running-ghp-jekyll/",
+      "excerpt"		: "How to run a fully featured Jekyll blog on Github using CI/CD"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Haufe API Strategy @ Daimler OneAPI Forum",
+      "link"			: "https://hlgr360.github.io/blog/blog/haufe-api-strategy/",
+      "excerpt"		: "Haufe SlideShare: Presenting the Haufe API strategy at Daimler OneAPI"
+    }
+  
+
+  
+    ,{
+      "title"			: "Summary of PayPal InnerSource Summit, 2016",
+      "link"			: "https://hlgr360.github.io/blog/blog/summary-paypal-innersource/",
+      "excerpt"		: "Haufe Blog: Notes from PayPal InnerSource Summit"
+    }
+  
+
+  
+    ,{
+      "title"			: "The state of our API Strategy",
+      "link"			: "https://hlgr360.github.io/blog/blog/state-of-api-strategy/",
+      "excerpt"		: "Haufe Blog: From a response to a sales call by an API Management vendor"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Automated Monolith",
+      "link"			: "https://hlgr360.github.io/blog/blog/automated-monolith/",
+      "excerpt"		: "Talk at API360 Microservices Summit in New York, 2016"
+    }
+  
+
+  
+    ,{
+      "title"			: "Summary of QCon New York, 2016",
+      "link"			: "https://hlgr360.github.io/blog/blog/qcon-ny-summary/",
+      "excerpt"		: "Haufe Blog: Notes from QCon New York"
+    }
+  
+
+  
+    ,{
+      "title"			: "IRC and the Age of Chatops",
+      "link"			: "https://hlgr360.github.io/blog/blog/irc-chatops/",
+      "excerpt"		: "Haufe Blog: IRC and the Age of Chatops"
+    }
+  
+
+  
+    ,{
+      "title"			: "The beginnings of our API Journey",
+      "link"			: "https://hlgr360.github.io/blog/blog/api-journey/",
+      "excerpt"		: "Haufe Blog: The beginnings of our API Journey"
+    }
+  
+
+  
+    ,{
+      "title"			: "How to start a developer blog",
+      "link"			: "https://hlgr360.github.io/blog/blog/haufe-hello-world/",
+      "excerpt"		: "Haufe Blog: Why culture is my most important task as CTO"
+    }
+  
+
+  
+    ,{
+      "title"			: "OSCON EU 2015: The Business of Open Source",
+      "link"			: "https://hlgr360.github.io/blog/blog/notes-oscon/",
+      "excerpt"		: "Notes from OSCON Europe 2015"
+    }
+  
+
+  
+    ,{
+      "title"			: "The role of API's in the Internet of Things",
+      "link"			: "https://hlgr360.github.io/blog/blog/apis-in-iot/",
+      "excerpt"		: "Talk at API360 Summit in Dallas, 2015"
+    }
+  
+
+  
+    ,{
+      "title"			: "My hunt for a link sharing site.",
+      "link"			: "https://hlgr360.github.io/blog/blog/searching-reddit/",
+      "excerpt"		: "Build your own Docker-ized Reddit clone with telesc.pe"
+    }
+  
+
+  
+    ,{
+      "title"			: "My hunt for a good project management tool.",
+      "link"			: "https://hlgr360.github.io/blog/blog/searching-kanban/",
+      "excerpt"		: "Finding the perfect open-source Kanban project management tool"
+    }
+  
+
+  
+    ,{
+      "title"			: "APIconUK 2014: Blockchain and APIs",
+      "link"			: "https://hlgr360.github.io/blog/blog/notes-apicon/",
+      "excerpt"		: "Notes from APIconUK 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "Upgrading from Postgres 9.2 to 9.3 on Heroku",
+      "link"			: "https://hlgr360.github.io/blog/blog/upgrading-postgres/",
+      "excerpt"		: "Why I stoped loving and started hating PaaS"
+    }
+  
+
+  
+    ,{
+      "title"			: "Event Horizon - The Future of APIs in IoT (revisited)",
+      "link"			: "https://hlgr360.github.io/blog/blog/event-horizon-revisited/",
+      "excerpt"		: "Designing APIs for the Internet of Things"
+    }
+  
+
+  
+    ,{
+      "title"			: "How to create effective API Design for IoT",
+      "link"			: "https://hlgr360.github.io/blog/blog/effective-api-design-for-iot/",
+      "excerpt"		: "Talk at APIcon in San Francisco, 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "Is IoT better described as Internet of Nodes?",
+      "link"			: "https://hlgr360.github.io/blog/blog/mesh-networks/",
+      "excerpt"		: "Are mesh networks the right answer for the Internet of Things?"
+    }
+  
+
+  
+    ,{
+      "title"			: "IOTcon 2014: The Connectivity of Things",
+      "link"			: "https://hlgr360.github.io/blog/blog/notes-iotcon/",
+      "excerpt"		: "Notes from IOTcon 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "EIC 2014: The Web of Identities",
+      "link"			: "https://hlgr360.github.io/blog/blog/notes-eic/",
+      "excerpt"		: "Notes from European Identity Conference 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "W3C Workshop 2014: The Web of Things",
+      "link"			: "https://hlgr360.github.io/blog/blog/notes-w3c-workshop/",
+      "excerpt"		: "Notes from the W3C Workshop 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Maker Manifesto",
+      "link"			: "https://hlgr360.github.io/blog/blog/maker-manifesto/",
+      "excerpt"		: "SDKs work until they don’t"
+    }
+  
+
+  
+    ,{
+      "title"			: "Is there an API in that (IoT) @ APIcon San Francisco",
+      "link"			: "https://hlgr360.github.io/blog/blog/is-there-an-api-in-that-iot/",
+      "excerpt"		: "An opinionated investigation into the impact of the Internet of Thing on APIs."
+    }
+  
+
+  
+    ,{
+      "title"			: "Lean API Strategy",
+      "link"			: "https://hlgr360.github.io/blog/blog/lean-api-strategy/",
+      "excerpt"		: "Looking beyond the buzzwords"
+    }
+  
+
+  
+    ,{
+      "title"			: "Would You Like a Library with That (API)?",
+      "link"			: "https://hlgr360.github.io/blog/blog/sdks-work-until-they-dont/",
+      "excerpt"		: "SDKs work until they don’t"
+    }
+  
+
+  
+    ,{
+      "title"			: "SDK versus API",
+      "link"			: "https://hlgr360.github.io/blog/blog/sdk-vs-api/",
+      "excerpt"		: "Inspired by a conversation with Kin Lane and Mike Amundsen"
+    }
+  
+
+  
+    ,{
+      "title"			: "Do you want a SDK with that API?",
+      "link"			: "https://hlgr360.github.io/blog/blog/a-lib-with-that-api/",
+      "excerpt"		: "Talk at NordicAPI’s Tour in Copenhagen, 2014"
+    }
+  
+
+  
+    ,{
+      "title"			: "Startup Weekend Stuttgart 2013",
+      "link"			: "https://hlgr360.github.io/blog/blog/startup-weekend-stuttgart/",
+      "excerpt"		: "Interview mit Holger Reinhardt - Startup Weekend Stuttgart 2013"
+    }
+  
+
+  
+    ,{
+      "title"			: "Infoworld: To secure the Internet of Things, assume failure",
+      "link"			: "https://hlgr360.github.io/blog/blog/to-secure-assume-failure/",
+      "excerpt"		: "Talking to Paul Venezia at InfoWorld"
+    }
+  
+
+  
+    ,{
+      "title"			: "Designing APIs for the Internet of Things",
+      "link"			: "https://hlgr360.github.io/blog/blog/designing-apis-for-iot/",
+      "excerpt"		: "Layer7 API Tech Talk with Holger Reinhardt"
+    }
+  
+
+  
+    ,{
+      "title"			: "Why you will need Data-as-a-Service (DaaS)",
+      "link"			: "https://hlgr360.github.io/blog/blog/why-you-need-daas/",
+      "excerpt"		: "CA Blog: Data and the Internet of Things"
+    }
+  
+
+  
+    ,{
+      "title"			: "Event Horizon - The Future of APIs in IoT",
+      "link"			: "https://hlgr360.github.io/blog/blog/event-horizon/",
+      "excerpt"		: "Designing APIs for the Internet of Things"
+    }
+  
+
+  
+    ,{
+      "title"			: "From zero to SaaS in 6 hours and 40 min",
+      "link"			: "https://hlgr360.github.io/blog/blog/from-zero-to-saas/",
+      "excerpt"		: "My Personal Hack-a-thon"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Lean (Entrepreneurship) Reading List",
+      "link"			: "https://hlgr360.github.io/blog/blog/lean-entrepreneur-books/",
+      "excerpt"		: "My favorite books on (Lean) entrepreneurship"
+    }
+  
+
+  
+    ,{
+      "title"			: "We are live (launchd.de that is)",
+      "link"			: "https://hlgr360.github.io/blog/blog/launchd-is-live/",
+      "excerpt"		: "Seeing an idea become reality"
+    }
+  
+
+  
+    ,{
+      "title"			: "The Layer7 Internet of Things Live Q&A",
+      "link"			: "https://hlgr360.github.io/blog/blog/layer7-iot-live-qa/",
+      "excerpt"		: "Layer7 TechTalk on YouTube"
+    }
+  
+
+  
+    ,{
+      "title"			: "ReadWrite: What’s Holding Up The Internet Of Things",
+      "link"			: "https://hlgr360.github.io/blog/blog/what-is-holding-up-iot/",
+      "excerpt"		: "Taking to Brian Proffitt at ReadWrite"
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+]

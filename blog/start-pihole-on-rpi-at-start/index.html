@@ -1,0 +1,299 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Running pihole on RPi at startup &#8211; Holger Reinhardt</title>
+<meta name="description" content="How to run services on Raspberry Pi at startup">
+<meta name="keywords" content="development, rpi, docker">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Running pihole on RPi at startup">
+<meta name="twitter:description" content="How to run services on Raspberry Pi at startup">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Running pihole on RPi at startup">
+<meta property="og:description" content="How to run services on Raspberry Pi at startup">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li><li><a href="https://hlgr360.github.io/blog/tags/#rpi" title="Pages tagged rpi">rpi</a></li><li><a href="https://hlgr360.github.io/blog/tags/#docker" title="Pages tagged docker">docker</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Running pihole on RPi at startup</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2020-03-29T00:00:00+00:00"><i class="fa fa-calendar-o"></i> March 29, 2020</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=development,rpi,docker&amp;text=Running%20pihole%20on%20RPi%20at%20startup&amp;url=https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/start-pihole-on-rpi-at-start/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Another weekend, and this time we will take a crack at running services like the <a href="https://pi-hole.net">pihole</a> not from the command line, but at startup.</p>
+
+<p>This is kind of a hygiene task from our last project of running <a href="https://pi-hole.net">pihole</a> using <a href="https://hlgr360.github.io/blog/blog/installing-docker-and-compose-on-rpi/">docker and docker-compose on RPi</a>. Back then I gave him a link to <a href="https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/">Five Ways To Run a Program On Your Raspberry Pi At Startup</a> and asked him to implement the <a href="https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/#systemd">systemd</a> approach. And while it took him a few tries he was able to get a first version to work. With that in place I was willing to reconfigure our Wifi router to use the ‘pihole’ as primary DNS server.</p>
+
+<p>Fast forward a couple of days and I noticed a lack of network activity on the pi - and after some more digging it turned out that the ‘pihole’ service was not longer running. But only this time the response of my son to my request of him debugging his solution was - how can I say - less than enthusiastic. He had already moved on and much rather annoyed his mother to install a 3D scanning app on her iPhone for him to be able to generate 3D models in <a href="https://www.blender.org">blender</a> for his next ‘Unity’ project.</p>
+
+<p>Oh well, so much for trying to teach him persistence and pride in ‘a job well done’. But I was also curious myself why it stopped working. So the old man got to work.</p>
+
+<p>If you need a refresher on how to use ‘systemctl’ command I can highly recommend <a href="https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units">How to use systemctl</a>.</p>
+
+<p>So <code class="highlighter-rouge">sudo systemctl status pihole.service</code> to the rescue. A noticed quickly that he had simply copied the <code class="highlighter-rouge">sudo</code> CLI command to into the service definition and called it day. Well, there are a few things wrong with that - systemd is running as root at startup and therefor does not need <code class="highlighter-rouge">sudo</code>, plus not using absolute file paths pretty much invites problems since startup services like <code class="highlighter-rouge">systemd</code> has no home directory and path settings like the <code class="highlighter-rouge">pi</code> user. Also he did not set the proper dependencies to run the <code class="highlighter-rouge">pihole</code> after the <code class="highlighter-rouge">docker.service</code>.</p>
+
+<p>But I would lie to say that I am all up on the latest on how to run docker as part of a <code class="highlighter-rouge">systemd</code> service. But this query on <a href="https://github.com/docker/compose/issues/4266">How to make a Systemd Unit for docker-compose</a> gave me most of what I needed, in particular <a href="https://github.com/docker/compose/issues/4266#issuecomment-302813256">this response</a>. While playing around I did run into the problem of <a href="https://stackoverflow.com/questions/31697828/docker-run-name-is-already-in-use-by-container">docker run –&gt; ‘name is already in use by container’</a> which did explain to me the cleanup commands prior to executing the service start.</p>
+
+<p>Without much ado, here is my <code class="highlighter-rouge">pihole</code> service definition.</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code># See https://github.com/docker/compose/issues/4266#issuecomment-302813256
+[Unit]
+Description=Starts pihole (an network wide ad blocker)
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/lib/systemd/system/pihole.service.d
+
+# Remove old containers, images and volumes
+ExecStartPre=/usr/local/bin/docker-compose down -v
+ExecStartPre=/usr/local/bin/docker-compose rm -fv
+#ExecStartPre=-/bin/bash -c '/usr/bin/docker volume ls -qf "name=pihole*" | xargs docker volume rm'
+ExecStartPre=-/bin/bash -c '/usr/bin/docker network ls -qf "name=piholeserviced_default" | xargs docker network rm'
+ExecStartPre=-/bin/bash -c '/usr/bin/docker ps -aqf "name=pihole" | xargs docker rm'
+
+# Compose up
+ExecStart=/usr/local/bin/docker-compose up
+
+# Compose down, remove containers and volumes
+ExecStop=/usr/local/bin/docker-compose down -v
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+</div>
+
+<p>I placed the above file <code class="highlighter-rouge">pihole.service</code> in <code class="highlighter-rouge">/lib/systemd/system</code> and created a directory <code class="highlighter-rouge">/lib/systemd/system/pihole.-service.d</code> (set as <code class="highlighter-rouge">WorkingDirectory</code> above). I placed the <code class="highlighter-rouge">docker-compose.yml</code> file of the ‘pihole’ into that directory - which saved me from having to specify the compose file via the <code class="highlighter-rouge">-f</code> command line parameter (remember that you can not assume to know from where the <code class="highlighter-rouge">systemd</code> process is running - so using absolute paths is a must).</p>
+
+<p>All what was then left to do was the following commands:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">sudo sudo systemctl daemon-reload</code> # to reload the changed definition</li>
+  <li><code class="highlighter-rouge">sudo systemctl start pihole.service</code></li>
+  <li><code class="highlighter-rouge">sudo systemctl status pihole.service</code></li>
+</ul>
+
+<p>On that note - I guess what I still need to teach my son that a job is only done when its done.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/installing-docker-and-compose-on-rpi/" class="btn" title="Install docker and docker-compose on RPi">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/installing-brew-on-rpi/" class="btn" title="Installing brew and lazydocker on RPi">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

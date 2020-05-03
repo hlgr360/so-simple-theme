@@ -1,0 +1,381 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>OSCON EU 2015: The Business of Open Source &#8211; Holger Reinhardt</title>
+<meta name="description" content="Notes from OSCON Europe 2015">
+<meta name="keywords" content="oss, innersource, conferences">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="OSCON EU 2015: The Business of Open Source">
+<meta name="twitter:description" content="Notes from OSCON Europe 2015">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSCON EU 2015: The Business of Open Source">
+<meta property="og:description" content="Notes from OSCON Europe 2015">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/notes-oscon/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/notes-oscon/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#oss" title="Pages tagged oss">oss</a></li><li><a href="https://hlgr360.github.io/blog/tags/#innersource" title="Pages tagged innersource">innersource</a></li><li><a href="https://hlgr360.github.io/blog/tags/#conferences" title="Pages tagged conferences">conferences</a></li>
+        </ul>
+        
+          <h1 class="entry-title">OSCON EU 2015: The Business of Open Source</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2015-11-04T00:00:00+00:00"><i class="fa fa-calendar-o"></i> November 04, 2015</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/notes-oscon/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=oss,innersource,conferences&amp;text=OSCON%20EU%202015:%20The%20Business%20of%20Open%20Source&amp;url=https://hlgr360.github.io/blog/blog/notes-oscon/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/notes-oscon/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/notes-oscon/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Last week I had the chance to attend the OSCON Europe conference in Amsterdam. I would give the conference an overall good rating, but I was missing a bit the excitement and drumbeat (and some roadmap discussions) of leading Open Source foundations like Mozilla, Apache, or even Open Source companies like Docker. There was an interesting (photoshop’ed) teaser in the keynote on the second day by the energetic founders of <a href="http://www.phusion.nl">Phusion</a> Team about ‘The Business of Open Source’. I would have loved to hear more about it - but maybe it was a clever marketing ploy to see if attendants would actually go out and ask the O’Really folks about that book. Well, it worked for me :)</p>
+
+<p>The presentations were literally all over the map and the quality varied greatly. Some of the coding tutorials were interesting but lost me within the first 10 min by excessively scrolling back and forth and not providing the code snippets via Github. I was impressed by <a href="http://kubernetes.io">Kubernetes</a> but asking me to create a Google Cloud account with a valid Creditcard as part of the workshop is a blatant attempt in developer trolling which I flat out refuse to follow. Both Google and CoreOS should have known better than trying to do that - and I am still surprised O’Reilly as conference organizer did let that happen. This is maybe appropriate at a sales event, but not at an Open Source conference (regardless if you are sponsor or not).</p>
+
+<p>In general the first day was much stronger than the second one. But attending the ‘Inner Soure’ presentation from Paypal made the second day all worth it. Unfortunately there are no speaker slides  for this talk on the conference site, but you can read the gist of it in this <a href="http://www.infoq.com/news/2015/10/innersource-at-paypal">InfoQ</a> article. I will certainly follow up on that one.</p>
+
+<p>Ok, so lets get down to business and my notes. You can find speaker slides - if available - on the <a href="http://conferences.oreilly.com/oscon/open-source-eu-2015/public/schedule/proceedings">OSCON</a> website.</p>
+
+<h4 id="architecture-as-code">Architecture as Code</h4>
+
+<ul>
+  <li>From the developer of tectribes.je (a tech community website)</li>
+  <li>Adding the software developer as major stakeholder of software architecture</li>
+  <li>Drawing pictures vs modeling system</li>
+  <li>‘Just enough software architecture’ -&gt; there is a model / code gap
+    <ul>
+      <li>Already described in ‘Software Reflexion Models’ paper from 1995</li>
+    </ul>
+  </li>
+  <li>Only include architectural significant elements -&gt; do not over specify for understanding
+    <ul>
+      <li>Analogue is to google maps -&gt; street view vs directions</li>
+    </ul>
+  </li>
+  <li>Write architecture as code
+    <ul>
+      <li>Checkout <a href="http://structurizr.com">structurizr</a>
+        <ul>
+          <li>Render architecture models from code</li>
+          <li>Architecture map(s) allows you to navigate from different level of abstraction down to source code</li>
+          <li>Java specification on Github</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>If software architecture mode is in the code, it can be extracted from the code</li>
+</ul>
+
+<h4 id="chaos-engineering-netflix">Chaos Engineering (Netflix)</h4>
+
+<ul>
+  <li>Resilience is a feature
+    <ul>
+      <li>Embrace failure rather than avoiding it
+        <ul>
+          <li>Add fail-save patterns</li>
+          <li>Expect the unexpected for fall-back patterns</li>
+          <li>Cost of resilience is accuracy or latency</li>
+          <li>Tell upstream servers to use what you have</li>
+          <li>Use local storage in browser as last fallback</li>
+        </ul>
+      </li>
+      <li>CAP theorem applies
+        <ul>
+          <li>Sacrifice availability or consistency, you can only have 2 out of 3</li>
+          <li>Best practices
+            <ul>
+              <li>Split out the control plane from workload</li>
+              <li>When you use a cloud provider like AWS, make a decision which part you use for either product or control plane</li>
+              <li>DNS and CDN are your best friends</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Introducing failure to test resilience
+        <ul>
+          <li>Failure Friday (play chaos monkey manually)</li>
+          <li>You can not fix a single point of failure unless you know about it</li>
+          <li>Outages are unpredictable, failures can be introduced deterministically</li>
+        </ul>
+      </li>
+      <li>Prevent propagation to avoid cascading failures
+        <ul>
+          <li>Use DNS: do geo routing with latency routing as fallback</li>
+          <li>Move traffic fast but not too fast to avoid overflow and cascading failure</li>
+          <li>Read the <a href="http://readwrite.com/2014/09/17/netflix-chaos-engineering-for-everyone">Readwrite article on Netflix Chaos Engineering</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="pull-requests-not-just-for-code-anymore">Pull Requests, not just for Code anymore</h4>
+
+<ul>
+  <li>Bad culture ruins good people</li>
+  <li>Difference between implicit vs explicit culture</li>
+  <li>You need to build explicit culture
+    <ul>
+      <li>Use github pages as repository for artifacts of culture
+        <ul>
+          <li>Engineering processes and policies</li>
+          <li>Architecture notes in RFC style</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Why is it different to a Wiki
+    <ul>
+      <li>You can only change a Wiki, but there is no review or approval</li>
+    </ul>
+  </li>
+  <li>Lessons learned
+    <ul>
+      <li>Learn git (offering classes and course)</li>
+      <li>Have a moderator to move things along and force closure</li>
+      <li>Be prepared for email flood (teach them how to use filters)</li>
+      <li>Encourage action: encourage pull request over encourage sugestions</li>
+      <li>With merge rights comes merges responsibility (do not leave them hanging)</li>
+      <li>Its not a democracy</li>
+      <li>Analogue to bonsai tree: a small team dedicated to growing and pruning it</li>
+      <li>Designate an entropy fighter (to delete outdated assets)</li>
+      <li>Embrace first day commit !!</li>
+      <li>Even the White House IT policy team is using it</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="inner-open-source-paypal">Inner Open Source (Paypal)</h4>
+
+<ul>
+  <li>Moving from blocking/bottleneck to mentoring</li>
+  <li>Scaling is a function of collaboration
+    <ul>
+      <li>Creating an environment which is self-healing and self-growing</li>
+    </ul>
+  </li>
+  <li>Build engagement through evangelism
+    <ul>
+      <li>10% of team are trusted committers, not more</li>
+      <li>Focus on the positive of contribution, not necessarily if you agree with iit</li>
+      <li>All reviews are publicly documented</li>
+      <li>Require respectful and constructive communication</li>
+    </ul>
+  </li>
+  <li>Check out <a href="http://InnerSourceCommons.org">Inner Source Commons</a></li>
+</ul>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/apis-in-iot/" class="btn" title="The role of API's in the Internet of Things">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/haufe-hello-world/" class="btn" title="How to start a developer blog">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

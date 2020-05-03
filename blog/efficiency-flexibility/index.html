@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Designing Systems - Efficiency vs Flexibility &#8211; Holger Reinhardt</title>
+<meta name="description" content="Or why you should consider taking a course in System Theory.">
+<meta name="keywords" content="systems">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Designing Systems - Efficiency vs Flexibility">
+<meta name="twitter:description" content="Or why you should consider taking a course in System Theory.">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Designing Systems - Efficiency vs Flexibility">
+<meta property="og:description" content="Or why you should consider taking a course in System Theory.">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/efficiency-flexibility/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/efficiency-flexibility/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#systems" title="Pages tagged systems">systems</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Designing Systems - Efficiency vs Flexibility</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2019-11-22T00:00:00+00:00"><i class="fa fa-calendar-o"></i> November 22, 2019</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/efficiency-flexibility/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=systems&amp;text=Designing%20Systems%20-%20Efficiency%20vs%20Flexibility&amp;url=https://hlgr360.github.io/blog/blog/efficiency-flexibility/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/efficiency-flexibility/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/efficiency-flexibility/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="http://work.haufegroup.io">Haufe Development Blog</a>)</p>
+
+<p>This blog post was inspired by a deployment tool discussion while drafting engineering blueprints to converge the organization on common application patterns. Since I have been in this kind of discussions repeatedly, I wanted to take the time to write down some thoughts about tradeoffs in system design. While the example at hand is about deployment tooling, it applies equally for instance to system integration and system architecture.</p>
+
+<p>On a side note, I think that software engineering as a profession can learn a lot by studying <a href="https://en.wikipedia.org/wiki/Systems_theory">System Theory</a> and <a href="https://en.wikipedia.org/wiki/Control_theory">Control Theory</a> - I wish those two subjects would be taught as the foundational subjects in software engineering at school. If feels we are wasting a lot of time in software engineering rediscovering fundamental truths about complex systems which every social science and physics major learns in his or her first couple of years.</p>
+
+<p>But coming back to the discussion at hand. We discussed the pros and cons of encouraging the use of the native tooling of cloud providers like <a href="https://aws.amazon.com/codestar/">AWS Codestar</a> and <a href="https://azure.microsoft.com/en-us/services/devops/">Azure DevOps</a> vs standalone tooling like <a href="https://jenkins.io">Jenkins</a> and <a href="https://www.terraform.io">Terraform</a> and <a href="https://serverless.com">Serverless</a>.</p>
+
+<p>The main argument for the latter is flexibility. In my experience it is not the code which creates a lock-in to a particular vendor, but the tooling we use to deploy the code. Think about this for a second - while the code representing the actual business value is mostly benign to the place where we run it, it is the hidden investment in tooling and associated process which can and in most cases does create a vendor lock-in. And the reason is quite trivial - it is much easier to argue for an investment in changing code to create business value for customers. It is much harder to argue for investing into changing tools to end up in the exact same place from a business and customer perspective. Tooling is a hidden enabler, whereas code represents real value to the customer in form of features. Yet it is the hidden enable which creates the lock-in, not the code itself. If you picked the Cloud-vendor native tooling, do you really think you are ever going to change vendors again? Even when at some point your and your vendors interest start to diverge? Or if the vendor decides to moneytize a previously free service or becomes a reputational risk which is detrimental to your business?</p>
+
+<p>On the other hand maybe you are trying to optimize for the short to medium term and that risk is acceptable for you. Because if you spend too much time designing for hidden flexibility and correspondingly too little into visible customer value, you might be too late to capture the market opportunity. <strong>Dying in beauty is still dead.</strong></p>
+
+<p>On the other side the argument is efficiency. Stuff just works, frictionless and convenient. Fast time to value, as most vendors would claim. And they are not wrong. Developer tooling from Microsoft and AWS simply works with their respective services.</p>
+
+<p>And you won’t encounter issues like the breaking changes to your terraform configuration when upgrading from terraform 0.11 to 0.12. This is a perfect example of the costs hidden in flexibility. The trigger for the upgrade is actually quite trivial: AWS has given notice that the node8 serverless runtime will be EOL at the end of the year. If you have deployed your serverless functions with terraform 0.11 you might be surprised to learn that in order to deploy node10 you need to upgrade to terraform 0.12. All is good until the first local run of the newly updated terraform: you learn you that you need to change your terraform files to match the new syntax. And conveniently it supplies a script for that too. All good so far. Since you might use Jenkins you will need to upgrade the terraform version there too. But latest at that point some yellow flags start to go up - you are now no longer changing single service deployment of your distributed application, but the global deployment tooling for all services of your application. And you start to wonder what will happen to all those non-Javascript services you have been deploying with terraform 0.11. Now you are in a tough place - will you upgrade the terraform files for all those none-affected services too? Who will spend the time to test all this functionality, when really you should be busy building the features customers are paying you for? You realize with a sinking heart that the only way out is for you to switch to <a href="https://jenkins.io/doc/book/pipeline/docker/">containerized builds in your Jenkins</a> unless you are willing to do a forklift upgrade of your entire application.</p>
+
+<p>But here is the catch - once you create such a containerized deployment pipeline, you are playing - from a systems perspective - at a different league. You are now being able to deploy each service in true isolation to any provider and system of your choosing. Any subsequent update will not longer have any knock-on effect on other services.</p>
+
+<p>So while you incurred short term additional costs for simple system hygiene, the end result is actually a much better system for the mid to long-term. This is actually not a random outcome, but a systemic effect in open systems and is described as ‘anti-fragile’ by Nassim Taleb in his manifesto <a href="https://www.amazon.com/gp/product/B009K6DKTS/">Antifragile: Things that Gain from Disorder</a>. Closed systems decay over time, whereas open systems can be reconfigured and actually improved over time but it comes with the cost of additional friction and overhead.</p>
+
+<p>As engineers we are always faced with this <strong>tradeoff between efficiency and flexibility</strong>. Between a system which is open but incurs overhead and contains redundancies and a tightly integrated closed system which is highly efficient. And as I mentioned before, this is not just applicable to tooling, but to almost every other dimension of a reasonable complex software system. Think Monolith vs Microservices in system architecture, or ESB vs <a href="https://martinfowler.com/articles/microservices.html#SmartEndpointsAndDumbPipes">Smart Endpoints and Dumb Pipes</a> in systems integration.</p>
+
+<p>And software engineering is not the first one to encounter this tradeoff. Clayton Christensen described in his second book <a href="https://www.amazon.com/Innovators-Solution-Creating-Sustaining-Successful/dp/1422196577/">The Innovator’s Solution</a> the <a href="https://blogs.msdn.microsoft.com/steverowe/2008/02/07/modularization-vs-integration-which-is-best/">Law of Conservation of Attractive Profits</a> and related <a href="https://www.christenseninstitute.org/interdependence-modularity/">Theory of Interdependence and Modularity</a>, trying to explain the economic fundamentals behind the success of companies producing tightly integrated closed products vs companies thriving with modular and flexible products. His insight was that when demand is higher than what technology can deliver, closed and tightly integrated systems tend to have a performance edge and win. But the moment technology delivers more than what is demanded, modular and open systems gain the edge by being more innovative. As we discussed above, open and modular systems have an inherent overhead which at that point can be absorbed by the performance surplus generated by the technology. Performance is not longer critical, since the technology at this point produces adequate (= ‘good enough’) performance in both. Which allows other factors like speed of innovation and costs to become decisive.</p>
+
+<p>If you are curious to explore this topic more, you should check out the <a href="https://en.wikipedia.org/wiki/Technology_adoption_life_cycle">Technology Adoption Cycle</a> as jump off point or read through Christensen’s two part paper on ‘Exploring the limits of the Technology S-curve’: <a href="https://scinapse.io/papers/1966572897">Component Technologies</a> and <a href="https://scinapse.io/papers/1984187795">Architectural Technologies</a></p>
+
+<p>For a somewhat counter-intuitive argument on being able to combine both efficiency <strong>AND</strong> flexibility, check out <a href="https://pdfs.semanticscholar.org/4678/caf882380d931a21010cf606f6113836577a.pdf">Flexibility vs Efficiency</a>. This paper analyzes the efforts by a Toyota subsidiary in Fremont, California (known as one of the first successfully mastering Lean in production outside of Japan) on combining botzh flexibility with efficiency. It draws from a wide variety of research in organizational design and social sciences. The story of this plant is probably worth a separate blog post, as it was the worst performing GM facility before it became the best performing facility with the same workers, but with a new management system and philosophy from Toyota (the home of Lean).</p>
+
+<p>I just do not think that there is a simple right or wrong. There is a time and place for each. If it is about time to value and meeting well defined short term objectives, you might to decide to choose efficiency over flexibility. On the other hand if you are looking longer term and/or want to preserve options for the future in the face of uncertainty, investing into more flexibility might be the better choice. Just make sure to not ‘die in beauty’.</p>
+
+<p>Maybe next time you are asked to make such tradeoff, answer ‘It Depends’ and think through the consequences of your choice from a larger system perspective. You might still not get it right completely, but at least you had a chance to think about it. And hopefully some of the books and articles I referenced above can help you making a better informed choice - we are <a href="https://www.youtube.com/watch?v=oLiPRRPaVd4">Creators of Worlds</a> after-all. ;)</p>
+
+<hr />
+<p>Feedback from <a href="https://twitter.com/mamund">@mamund</a>:</p>
+
+<p>This choice between “all-in” on a platform and mix and match your own also has a maturity element. When you first begin, let other make choices for you while you focus on what’s important. As you grow more adept, start to see patterns and “blocks” of functionality in the system (big picture) where you can make changes (add my own monitoring tools, etc.) and, finally, when you are well-versed in the way the system behaves, you can better afford to take on added complexity of choice and flexibility. So in addition there is a maturity-over-time dimension affecting your trade-off.</p>
+
+<hr />
+<p>From <a href="https://twitter.com/patkua">@patkua</a> in his latest <a href="http://levelup.thekua.com">email newletter</a></p>
+
+<p>He references two articles which are expressing the need for systems thinking much better than I ever can do: <a href="https://thesystemsthinker.com/a-lifetime-of-systems-thinking/">Russel Ackoff: A Lifetime of System Thinking</a> and <a href="https://lethain.com//building-evolutionary-architectures/">Will Larsen’s: Notes on Evolutionary Architecture</a></p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/minecraft-forge-install/" class="btn" title="Minecraft Forge install on MacOS">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/digital-leute-2019/" class="btn" title="Summary of 'Digitale Leute' 2019 in Cologne">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

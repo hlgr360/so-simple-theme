@@ -1,0 +1,266 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Is IoT better described as Internet of Nodes? &#8211; Holger Reinhardt</title>
+<meta name="description" content="Are mesh networks the right answer for the Internet of Things?">
+<meta name="keywords" content="iot, blockchain, p2p">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Is IoT better described as Internet of Nodes?">
+<meta name="twitter:description" content="Are mesh networks the right answer for the Internet of Things?">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is IoT better described as Internet of Nodes?">
+<meta property="og:description" content="Are mesh networks the right answer for the Internet of Things?">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/mesh-networks/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/mesh-networks/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#iot" title="Pages tagged iot">iot</a></li><li><a href="https://hlgr360.github.io/blog/tags/#blockchain" title="Pages tagged blockchain">blockchain</a></li><li><a href="https://hlgr360.github.io/blog/tags/#p2p" title="Pages tagged p2p">p2p</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Is IoT better described as Internet of Nodes?</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2014-09-16T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 16, 2014</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/mesh-networks/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=iot,blockchain,p2p&amp;text=Is%20IoT%20better%20described%20as%20Internet%20of%20Nodes?&amp;url=https://hlgr360.github.io/blog/blog/mesh-networks/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/mesh-networks/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/mesh-networks/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>The recent Gigagom article about <a href="http://semanticweb.com/open-gardens-firechat-adds-iot_b44343">FireChat</a> caught my interest. In particular the following paragraph</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>Open Garden’s apps all have one thing in common: they create networks on the fly from the connections all around us. These kind of ad hoc networks will connect nearby smartphones and tablets, each of which will act as node that can either receive data or pass it along."
+</code></pre>
+</div>
+
+<p>Since peer-to-peer networks have been on my radar ever since a conversation with a “Hacktevist” at last year’s <a href="http://thingmonk.com">ThingMonk</a> I tried to dig a bit deeper into the underlying technologies. According to this <a href="https://gigaom.com/2014/03/20/open-garden-retools-its-crowdsourced-mesh-technology-for-an-ios-messaging-app/">article</a> OpenGarden leverages Apple’s <a href="http://nshipster.com/multipeer-connectivity/">Multipeer Connectivity Framework</a> first introduced in iOS7 together with its very own <a href="https://opengarden.com/Multi-hop_Wi-Fi_Offload.pdf">Multihop Connection</a> technology.</p>
+
+<p>Why am I finding this intriguing? Well, first and for most because it provides a very viable example of the so called ‘Sharing Economy’ in a yet completely unexpected corner. Second, because IoT - for me at least - has so much more in common with a decentralized Social Network than with a Hub and Spoke (Cloud) model currently favored by the industry. Also the term Web of Things (WoT) better captures that notion than Internet of Things (See also my <a href="https://hlgr360.github.io/blog/blog/notes-w3c-workshop/">Notes on the W3C Workshop on the Web of Things</a> I do need to clarify though that by Social Network I do not mean the centralized Facebook or Google+ data sinkholes, but rather the graph relationship between people (FOAF). Overlay that with the relationship of things to people and you have a magnitude more complex graph (FOAT - Friend of a Thing). Now combine the concept of a graph relationship  with a notion of interlocking network of domains (<a href="http://mholdmann.wordpress.com/2013/05/11/iot-is-better-discribed-as-the-internet-of-nodes/">or nodes as Michael Holdmann called it</a>) and you see an alternative topology emerging, where things just talk within enclosed domains (things I carry only talk to other things I carry, or things in my house only talk to other things in my house, etc) without the need of a central server in the cloud or anywhere else (the afore mentioned Hub and Spoke topology).</p>
+
+<p>In a previous Layer7 blog I explained the concept as follows</p>
+
+<blockquote>
+  <p><strong>Where will the intelligence be in IoT? Will there be some form of on-site intelligence, so that core functionality continues even if the connection is lost? Or will all intelligence be cloud-based?</strong>
+It depends on whether you design for centralized “hub and spoke” or decentralized “domains of concern”. The former is responsible for correlating data and events within the domain whereas the latter is responsible for communicating with other domains (I owe this concept to <a href="http://mholdmann.wordpress.com/2013/05/11/iot-is-better-discribed-as-the-internet-of-nodes/">Michael Holdmann’s blog</a>). “Domains of concern” design communicates with different domains for different purposes –  in an apartment for home automation, in an apartment building for HVAC, in a city block for energy generation/consumption, in a city for utility grid etc. Emergencies or out-of-bound signals are handled like exceptions and are bubbling up through the domains until intercepted. But most things will serve an inherent purpose and that purpose will not be affected by the absence of any connectivity. There will be intelligence within the core of each domain as well as at the edges/intersections with other domains.</p>
+</blockquote>
+
+<p>I find that idea so much more attractive because it completely invalidates the notion that somehow we have to surrender our data to some central server in the cloud to get the benefits of IoT. The fact is - as soon as your data in on someone else’s server in the cloud, you have to trust that this data is not being mined and resold to the highest bidder. Based on what I have seen so far too many startups jump on the bandwagon of easy money and base their business model on ‘selling data about their user’ rather than ‘selling value to the user’.</p>
+
+<p>My interest in Mesh and Peer-to-Peer Networks is based on the dislike of having someone offer me a marginal value-added service as the carrot to collect and mine my data and sell it for big bucks (having spent the first 20 years of my live under a communist surveillance state makes me a big fan of individual freedom and right to privacy). I was planning to look more into how some of the early music sharing services had used peer-to-peer networks like <a href="http://www.bittorrent.com">BIttorrent</a> to archive global scale while explicitly designed to avoid central servers. And obviously I was not alone thinking alongs those lines, as recent work by IBM Research into <a href="https://gigaom.com/2014/09/09/check-out-ibms-proposal-for-an-internet-of-things-architecture-using-bitcoins-block-chain-tech/">combining Bitcoins block chain encryption with Bittorrent</a> shows.</p>
+
+<p>By the way - I will be heading out <a href="http://thingmonk.com">ThingMonk</a> in London again this year. Together with <a href="http://thingscon.com">ThingsCon</a> in Berlin these two are the conferences to meet the most diverse and creative crowd on all things IoT .</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/notes-iotcon/" class="btn" title="IOTcon 2014: The Connectivity of Things">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/effective-api-design-for-iot/" class="btn" title="How to create effective API Design for IoT">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

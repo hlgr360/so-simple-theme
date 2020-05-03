@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Taking back control of your content - Developer style &#8211; Holger Reinhardt</title>
+<meta name="description" content="How to run a fully featured Jekyll blog on Github using CI/CD">
+<meta name="keywords" content="development, content">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Taking back control of your content - Developer style">
+<meta name="twitter:description" content="How to run a fully featured Jekyll blog on Github using CI/CD">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Taking back control of your content - Developer style">
+<meta property="og:description" content="How to run a fully featured Jekyll blog on Github using CI/CD">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/running-ghp-jekyll/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/running-ghp-jekyll/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li><li><a href="https://hlgr360.github.io/blog/tags/#content" title="Pages tagged content">content</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Taking back control of your content - Developer style</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2017-08-21T00:00:00+00:00"><i class="fa fa-calendar-o"></i> August 21, 2017</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/running-ghp-jekyll/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=development,content&amp;text=Taking%20back%20control%20of%20your%20content%20-%20Developer%20style&amp;url=https://hlgr360.github.io/blog/blog/running-ghp-jekyll/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/running-ghp-jekyll/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/running-ghp-jekyll/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Back when I started as API Evangelist for the <a href="http://apiacademy.co">Layer7 API Academy</a> blogging, presenting and speaking in public became part of my job description. And very quickly I realized that something was horribly broken with the way we manage content. Somehow there was a fundamental disconnect between the level of control and agility I had when writing code and writing content. Doing the latter alwasy seem to involve awkward manual review processes and word documents and formatting and endless emails back and forth with different versions and initials.</p>
+
+<p>Since my new role coincided with a friend and I launching <a href="http://launchd.de">launchd.de</a> - our lean business development platform - we tried to pick better tooling for our private blogging. Enter <a href="http://wordpress.org">wordpress.org</a>. Compared to the corporate blogging this was already quite a step up in terms of control .. but formatting still was more Word like .. and - looking back - it still lacked the clarity of versioning and diffing and collaborative features I am used to when writing code.</p>
+
+<p>In parallel a big topic in the API community was (and still is) <a href="http://documentation.apievangelist.com">developer focussed API documentation</a> with plenty of startups tackling the challenge to create good looking and functional documentation for humans. And the ever present challenge of keeping documentation in sync with the API it describes. This further sensitized me about how (tech) writers and developers can engage in close collabroation to create a single customer facing product, the API.</p>
+
+<p>Fast forward a year or two and Layer7 was aqcuired by CA Technologies and my ‘precious’ content disappeared together with the Layer7 brand and blog. It just went poof up into the digital ether, leaving me scrambling to reconstruct it. Roughly at the same time I heard first folks mentioning a concept of <strong>Docs-as-Code</strong> at conferences like <a href="https://hlgr360.github.io/blog/blog/notes-oscon/">OSCON</a>. By that time I was CTO of the <a href="http://www.haufegroup.com">Haufe.Group</a> - and had the means to do it differently. So I decided to host our <a href="http://work.haufegroup.io">Developer Blog</a> on <a href="https://github.com/Haufe-Lexware/Haufe-Lexware.github.io">Github</a>, or rather more precisely <a href="https://pages.github.com">Github Pages</a>. And I did not stop there - I took the talk <a href="https://media.ccc.de/v/froscon2015-1525-pull_requests_not_just_for_code_anymore">Pull requests, not just for code anymore</a> to heart and published our CTO Office policies in a private repo as well.</p>
+
+<p>In the meantime more folks are starting to think about <a href="http://www.writethedocs.org/guide/docs-as-code/">Docs-as-Code</a> and <a href="http://www.docslikecode.com">Docs Like Code</a>: the folks from <a href="http://www.writethedocs.org">WriteTheDocs</a> and <a href="https://justwriteclick.com">Ann Gentle</a> respectively. Anne recently published a book called <a href="https://justwriteclick.com/books/docs-like-code/">Docs Like Code</a>.</p>
+
+<p>My gut tells me that there could be even a bigger story yet - why stop at docs, and not just simply apply this model for content in general? <a href="https://www.haufe.com/en/vision/haufe-group">HaufeGroup</a> with its roots as publisher is still producing plenty of valuable content but it is being locked up in traditional, closed-source and proprietory CMS’s. But those ideas are best told in a blog post over at our <a href="http://work.haufegroup.io">Haufe.Group blog</a> site.</p>
+
+<p>(Update: I just published <a href="http://work.haufegroup.io/content-as-code/">Treating our Content as Code: What DevOps and CI/CD can teach us about content publishing.</a>)</p>
+
+<p>So it is only consequent that I first try to liberate my own content from Wordpress and friends. It should be obvious by now that my new blog will live on Git(hub) and be served through Github Pages. So I could have simply copied the format from our developer blog and be done with it. But to make things more interesting, I decided to go for a fully featured Jekyll blog. Github pages only support very few Jekyll plugins - for a more sophisticated website one needs to run Jekyll outside of Github and only push the generated pages into Github Pages.</p>
+
+<p>I picked the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/">So Simple Theme</a> and now had to come up with a way to generate the website. Obviously I could have done it <a href="http://varunbpatil.github.io/2013/07/06/jekyll-build-fail/#.WZV5qK2B3re">manually</a> but that feelt wrong. No, if we are serious about ‘content-as-code’ than we should hold ourselfs to the same standard for publishing content as we do on building code. If I check-in a new post, I expect the toolchain to pick up the change and rebuild the site and deploy it automatically. I wanted a CI/CD pipeline for publishing content. A few google queries later I had found what I was looking for: <a href="http://pauldambra.github.io/using-travis-to-build-jekyll.html">Using Travis CI to build a Jekyll site</a>. Combining the manual build script with <a href="http://travis-ci.org">travis-ci</a> gave me a sweet solution to have my cake and eat it too, all within a single Github repo. You can find the final build script <a href="https://github.com/hlgr360/blog/blob/master/build-site.sh">here</a>.</p>
+
+<figure class="half">
+	<img src="/blog/images/running-ghp-jekyll/travis-ci.png" alt="travis-ci" />
+	<img src="/blog/images/running-ghp-jekyll/travis-log.png" alt="travis-log" />
+	<figcaption>Travis-CI build screens.</figcaption>
+</figure>
+
+<p>And kudos to the <a href="http://travis-ci.org">travis-ci</a> team for building such an awesome service. A special nice touch was the ability to include the build badges in the README of <a href="https://github.com/hlgr360/blog">my blog repo</a>.</p>
+
+<p>Having solved the technical challenges, all what was left was a lot of busy work to liberate my content from its various prisons and walled gardens. You are obviously reading this blog already on my new site - so go ahead and explore some of my blog posts, videos and articels. I personally find the <a href="https://hlgr360.github.io/blog/tags/">tag page</a> the easiest way to navigate across my content.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/haufe-api-strategy/" class="btn" title="The Haufe API Strategy @ Daimler OneAPI Forum">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/content-as-code/" class="btn" title="Treating our Content as Code">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

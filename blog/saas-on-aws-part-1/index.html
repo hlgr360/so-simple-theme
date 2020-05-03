@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Building SaaS on AWS Serverless - Part 1 &#8211; Holger Reinhardt</title>
+<meta name="description" content="Adello Blog: Programmatic advertising explained">
+<meta name="keywords" content="slides, development, serverless">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Building SaaS on AWS Serverless - Part 1">
+<meta name="twitter:description" content="Adello Blog: Programmatic advertising explained">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building SaaS on AWS Serverless - Part 1">
+<meta property="og:description" content="Adello Blog: Programmatic advertising explained">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#slides" title="Pages tagged slides">slides</a></li><li><a href="https://hlgr360.github.io/blog/tags/#development" title="Pages tagged development">development</a></li><li><a href="https://hlgr360.github.io/blog/tags/#serverless" title="Pages tagged serverless">serverless</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Building SaaS on AWS Serverless - Part 1</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2019-10-20T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 20, 2019</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=slides,development,serverless&amp;text=Building%20SaaS%20on%20AWS%20Serverless%20-%20Part%201&amp;url=https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/saas-on-aws-part-1/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="http://adello.github.io">Adello Development Blog</a>)</p>
+
+<p>On September 26th, 2019 I presented our 5 month journey of building our mobile marketing platform <a href="https://www.adello.direct">adello.direct</a> on AWS Serverless as part of the <a href="http://work.haufegroup.io/TEC-Day-2019-rundowni/">Haufe TEC Day</a>.</p>
+
+<p>In this blog post I will  try to demystify programmatic advertisement. If you want to follow along with my notes, please continue reading below the slides.</p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/KoqvM9eJhlVe76" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+
+<p>Even though the vast majority of us have been using advertising-financed apps and mobile website on our mobile phones just a few understand the amazing technology powering this huge market.</p>
+
+<p>Starting from slide 6 you will find the basic components of what constitutes something like a stock exchange but for online advertising. On one side there are apps and websites which include SDK’s from one or more ad exchanges like <a href="https://developers.google.com/ad-manager/mobile-ads-sdk">Google’s AdX</a> or <a href="https://rubiconproject.com">Rubicon</a> or <a href="https://www.smaato.com">Smaatoo</a> just to name a few. Those seller of advertisement space on their respective app or website are the <strong>supply</strong> side of the market. On the other side you have the buyers of advertising, the advertising agencies or companies wanting to run ads. This is the <strong>demand</strong> side. Since the ad exchanges are programmatic marketplaces, the actual buying of ads is realized through so called <a href="https://developers.google.com/third-party-ads/adx-vendors">Demand Side Platforms aka DSP’s</a>. We will see in a minute how.</p>
+
+<p>As in a stock market, demand and supply are highly variable and prices are set through an auction process. There are various auction types, i.e. first price auction or second price auction but lets leave that for another blog post. What you should take away from this is that the auctions are happening in real-time through a bidding process. This is where the so called Real-Time-Bidder (RTB) comes in. The RTB is the equivalent of a stock broker on the exchange floor deciding which of the millions of available ad spaces at any given second to bid on and at what price. Slide 7 shows the basic flow. To give you a feeling of the kind of real-time I am talking about, consider the numbers on slide 8. The bidding process has to be completed within 100ms and resulting play-out of the winning ad (aka the ad campaign having made the winning bid) has to be completed in 10ms. So we are talking real realtime. In those 100ms you - as DSP - have to not just decide which ad space (i.e. mobile app or mobile website) to bid for but also how much to bid.</p>
+
+<p>We can of course all have different opinions about advertising, but from a technical point of view this is real tech no matter how you dice it and slice it.</p>
+
+<p>Adello decided very early on to deploy machine learning at the real-time bidder - like five years before machine learning became cool and everyone was doing it (at least in Powerpoint presentations ;-)). Depending on the depth of the mobile advertising funnel your ad campaign is targeting (slide 9), machine learning models would make the decision for which ad space to bid and how much. Those machine learning models were trained by the millions of transactions happening daily on those real-time marketplaces. No wonder that the inspiration of the core technology of Adello came from high-frequency trading systems. But while the sheer number of transactions is mind-blowing, slide 10 tells you why machine learning is ultimately a numbers games. In Adello I was first introduced to the rule of 1000 - for each funnel stage you need to have at least a 1000 data points to create a somewhat meaningful ML model. Consider that only a fraction of users ever pass from one funnel stage to the next and one quickly realizes the massive scale of data needed on the top of the funnel by calculating backwards.</p>
+
+<p>In our experience the numbers hold up all the way to Landings. But beyond optimizing for Landings things get complicated. Not just because of the large number of Impressions this requires, but also because a lot of times there is a break in media. While you might click on an ad for an Opera on the way home in the subway, will you buy the tickets on your mobile or will you take a mental note and buy it from your laptop later in the evening. Lets just say there are ways to correlate, but it is not longer straightforward and involves a deeper integration with the e-commerce system of the customer.</p>
+
+<p>Slide 11 shows our Machine Learning Loop we use to optimize mobile advertising campaigns for our customers. Our <a href="https://www.adello.com/products/creative-gallery/">creatives (= mobile ads)</a> are designed to engage and are instrumented to measure engagement. These signals feed into the first step of the loop. The data is normalized, cleaned (i.e. location data), enriched (by device and context), and checked for any fraud indicators during the second step.</p>
+
+<p>The resulting data stream is then feed into the models to identify clusters of indicators predicting a certain performance at the chosen primary KPI (i.e. low cost per impressions for archiving reach) together with a secondary KPI (i.e. a certain floor of the click-rate). Keep  in mind that the KPI’s do not necessarily have a linear relationship. A low cost per impressions might make certain volume publishers attractive where the click-rate is below the average. Balancing out those sometimes competing KPI’s is where machine learning excels. But truth being told, we deploy heuristics and statistical methods in addition to ML.</p>
+
+<p>One of the most important lessons is on slide 12: <strong>Machine Learning today works in robust markets where you don’t have to be right all the time.</strong></p>
+
+<p>In the current hype cycle it is easy to forget that there is a difference between Alexa responding ‘I did not get that’ and a car attempting to drive autonomously on a normal street. With Alexa you get the chance to repeat your question, maybe vary it like a seasoned Google Search user hunting for the right kind of words resulting in the best result. Getting hit by car because the color of your jacket was not part of the training set might mean that you will not get a second chance. So when you read the next time of machine learning this and machine learning that, keep that sobering thought in mind. Not seeing the forest because of the trees might become literal truth in regard to the current state of Machine Learning. Which is why - despite of it all - programmatic advertising might not be a bad place to learn Machine Learning in production.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/api-style-guide/" class="btn" title="The Adello API Style Guide">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/aws-logging/" class="btn" title="AWS Lambda CloudWatch Logging">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

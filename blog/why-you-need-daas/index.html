@@ -1,0 +1,267 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Why you will need Data-as-a-Service (DaaS) &#8211; Holger Reinhardt</title>
+<meta name="description" content="CA Blog: Data and the Internet of Things">
+<meta name="keywords" content="api, data">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Why you will need Data-as-a-Service (DaaS)">
+<meta name="twitter:description" content="CA Blog: Data and the Internet of Things">
+<meta name="twitter:site" content="@hlgr360">
+<meta name="twitter:creator" content="@hlgr360">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hlgr360.github.io/blog/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why you will need Data-as-a-Service (DaaS)">
+<meta property="og:description" content="CA Blog: Data and the Internet of Things">
+<meta property="og:url" content="https://hlgr360.github.io/blog/blog/why-you-need-daas/">
+<meta property="og:site_name" content="Holger Reinhardt">
+
+
+
+
+
+<link rel="canonical" href="https://hlgr360.github.io/blog/blog/why-you-need-daas/">
+<link href="https://hlgr360.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Holger Reinhardt Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hlgr360.github.io/blog/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://hlgr360.github.io/blog/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://hlgr360.github.io/blog/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://hlgr360.github.io/blog/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hlgr360.github.io/blog/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hlgr360.github.io/blog/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hlgr360.github.io/blog/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hlgr360.github.io/blog/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="https://hlgr360.github.io/blog/about/" >About</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/tags/" >Tags</a></li>
+		  
+		    
+		    <li><a href="https://hlgr360.github.io/blog/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://hlgr360.github.io/blog/" class="site-logo" rel="home" title="Holger Reinhardt"><img src="https://hlgr360.github.io/blog/images/site-logo.png" width="200" height="200" alt="Holger Reinhardt logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://hlgr360.github.io/blog/">Holger Reinhardt</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">I love building products.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="https://hlgr360.github.io/blog/tags/#api" title="Pages tagged api">api</a></li><li><a href="https://hlgr360.github.io/blog/tags/#data" title="Pages tagged data">data</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Why you will need Data-as-a-Service (DaaS)</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="https://hlgr360.github.io/blog/images/hlgr360.jpg" class="bio-photo" alt="Holger Reinhardt bio photo"/>
+        
+        <span class="author vcard">By <span class="fn">Holger Reinhardt</span></span>
+        <span class="entry-date date published"><time datetime="2013-10-17T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 17, 2013</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-linkedin">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hlgr360.github.io/blog/blog/why-you-need-daas/" title="Share on LinkedIn" itemprop="LinkedIn"><i class="fa fa-linkedin-square"></i> Share</a>
+</span>
+<span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=api,data&amp;text=Why%20you%20will%20need%20Data-as-a-Service%20(DaaS)&amp;url=https://hlgr360.github.io/blog/blog/why-you-need-daas/&amp;via=hlgr360" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hlgr360.github.io/blog/blog/why-you-need-daas/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=https://hlgr360.github.io/blog/blog/why-you-need-daas/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>(this post was originally published on the <a href="https://www.ca.com/en/blog-highlight/why-you-will-need-data-as-a-service-daas.html">CA Blog</a>)</p>
+
+<p>There is lot of talk these days about the Internet of Things (IoT). You see commercials featuring smart jet engines that alert mechanics when they sense a problem with their performance, or inventories of parts that keep track of themselves. One thing that is never talked about is the data architectures we will need to make the Internet of Things possible on a large scale. It is, after all, called the Internet of Things, which implies a global reach, ubiquitous connectivity and massive amounts of data.</p>
+
+<p>Last May, <a href="https://www.abiresearch.com/press/more-than-30-billion-devices-will-wirelessly-conne">ABI Research</a> estimated that there are more than 10 billion wirelessly connected devices in the world today, with more than 30 billion devices expected by 2020. With 10 billion devices and counting, IoT is obviously a big contributor to Big Data.</p>
+
+<p>But there’s more to IoT data than the fact that it’s Big Data: There’s also Fast Data and Open Data. Most times, there’s a velocity behind data, and the data needs to be available for consumption and analysis in real time. Consider the data culled via mobile marketing. When a customer walks through the door, it doesn’t help to do a post-mortem analysis to determine what goods could have been offered, because it’s too late.</p>
+
+<p>Fast Data means fast enough to process the relevant data in order to make decisions right now, as it happens. When the customer walks through the door, should a deal be given? What kind of deal? Because otherwise, the moment where value could have been added is lost forever. As for Open Data, it is about getting easy access to all the different data silos, data that has been made available for third-party use.</p>
+
+<p>The promise of the IoT is that businesses can make better decisions and improve products, processes and customer service. But this can be done only if businesses can access all that data easily, effectively and securely; turn it into useful information that can be shared; and ultimately use it to create value. This is why we need Data as a Service (DaaS).</p>
+
+<p>Following the same model as any as-a-service—SaaS, PaaS, IaaS—Data as a Service (DaaS) enables data to be shared among entities (clouds, systems, apps, etc.) regardless of where that data came from. More specifically, DaaS is designed to make it easy for data architects to easily select data from different pools, conceal or filter any sensitive data, and make the accepted data available on demand so whoever needs it (or whatever, for that matter) can access it whenever.</p>
+
+<p>An as-a-service model such as DaaS will make it easier to share the IoT information. It can make organizations more agile and speed time to market because the benefactors of the data or information would be able to utilize it without having to go through the hoops typically required to get data collected, cleansed, secured, managed and distributed. And IT teams wouldn’t have to process all those requests, nor would they have to develop all the unique Application Programming Interfaces (API) that would be necessary.</p>
+
+<p>DaaS, and an API tier that serves as the ultimate arbiter to determine which data needs to be obfuscated and which can be shared, will streamline the connection between the people who find, own and manage the data (let’s call them the data architects), and the IT group that creates and owns the APIs that serve as the windows to the outside world. One example of how such an intelligent API tier for DaaS can be realized is through the <a href="http://www.layer7tech.com/library/solution-briefs/building-data-lenses-using-layer-7/2981">Layer7 Data Lens</a> solution, which gives IoT data owners – such as manufactures or telco carriers – an easy and secure way to share a focused and billable data set with their customers and partners</p>
+
+<p>Enterprises are already staking their claims in the new IoT world order, where the physical world of “Things” is intersecting with the digital world of the “Internet.” When you add in the potential for 3-D printing of parts and products, you have an ever-greater blurring of the physical and digital worlds and a potential manufacturing revolution in the making.</p>
+
+<p>Bosch—known for its home appliances—has been acquiring software companies over the last few years. GE is investing billions in a Big Data lab in Silicon Valley so it can leverage data for GE’s various businesses, from jet engines to commercial vehicles. Both companies sense that the business of making “Things” is about to change radically. Who needs manufacturing plants or container ships coming from China when you can just 3-D print what you need off of the Internet?</p>
+
+<p>Not all enterprises need to build research labs or acquire software companies, but they should be paying close attention to IoT—and the data generated by it—and how they can leverage it all. At the intersection of Big Data and IoT, with direction from DaaS, the right API tier and innovative measures, enterprises will be able to attain real value in today’s data-driven economy, and ultimately control their own destinies.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'hlgr360'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://hlgr360.github.io/blog/blog/event-horizon/" class="btn" title="Event Horizon - The Future of APIs in IoT">Previous</a>
+      
+      
+        <a href="https://hlgr360.github.io/blog/blog/designing-apis-for-iot/" class="btn" title="Designing APIs for the Internet of Things">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2020 Holger Reinhardt. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/hlgr360" title="Holger Reinhardt on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/hrreinhardt" title="Holger Reinhardt on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://www.slideshare.net/HolgerReinhardt" title="Holger Reinhardt on SlideShare" target="_blank"><i class="fa fa-slideshare fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/hlgr360" title="Holger Reinhardt on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="https://hlgr360.github.io/blog/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://hlgr360.github.io/blog';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://hlgr360.github.io/blog/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://hlgr360.github.io/blog/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-105145569-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
