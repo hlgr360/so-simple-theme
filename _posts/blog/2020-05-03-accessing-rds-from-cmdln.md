@@ -20,7 +20,7 @@ As it turns out there are two settings, you need to change to be able to connect
 
 Thats it - may the code be with you.
 
-### Further reading
+#### Further reading
 * <https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Troubleshooting.html#CHAP_Troubleshooting.Connecting>
 * <https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SettingUp.html#CHAP_SettingUp.SecurityGroup>
 
